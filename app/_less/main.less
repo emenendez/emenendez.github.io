@@ -30,19 +30,42 @@ body {
   color: @gray-lighter;
 }
 
+/* Nav links */
 
-/* CUSTOMIZE THE NAVBAR
--------------------------------------------------- */
+.nav {
+  & > li {
+    display: inline-block;
 
-.navbar-wrapper .navbar {
-  padding-right: 15px;
-  padding-left: 15px;
+    & > a {
+      padding-right: 0;
+      padding-left: 0;
+      // color: #fff; /* IE8 proofing */
+      // color: rgba(255,255,255,.75);
+      border-bottom: 2px solid transparent;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        border-bottom-color: #a9a9a9;
+        border-bottom-color: rgba(255,255,255,.25);
+      }
+    }
+  }
+
+  & > li + li {
+    margin-left: 20px;
+  }
+
+  & > .active {
+    & > a,
+    & > a:hover,
+    & > a:focus {
+      // color: #fff;
+      // border-bottom-color: #fff;
+    }
+  }
+  
 }
-.navbar-wrapper .navbar .container {
-  width: auto;
-}
-
-
 
 /* MARKETING CONTENT
 -------------------------------------------------- */

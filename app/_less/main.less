@@ -76,14 +76,17 @@ body {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: normal;
-}
-.marketing .col-lg-4 p {
-  margin-right: 10px;
-  margin-left: 10px;
+.papers {
+  .col-md-4 {
+    margin-bottom: @line-height-computed;
+    text-align: center;
+  }
+  
+  h2 {
+    font-weight: normal;
+  }
+
+  a.btn:after {
+    content: " \BB";
+  }
 }

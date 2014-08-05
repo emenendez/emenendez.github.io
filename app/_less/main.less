@@ -8,6 +8,11 @@
 
 /* Variables */
 @link-underline: 2px;
+.header() {
+  background: url('../img/cartographer.png');
+  color: @gray-lighter;
+  font-family: @font-family-headings;
+}
 
 
 /* GLOBAL STYLES
@@ -29,9 +34,7 @@ body {
 /* Carousel base class */
 .jumbotron {
   text-align: center;
-  background: url('../img/cartographer.png');
-  color: @gray-lighter;
-  font-family: @font-family-headings;
+  .header;
 }
 
 /* Nav links */
@@ -72,6 +75,13 @@ body {
   }
 }
 
+footer {
+  font-size: @font-size-small;
+  p {
+    margin: 0;
+  }
+}
+
 /* WHITEPAPER PANELS
 -------------------------------------------------- */
 
@@ -86,15 +96,61 @@ body {
     font-weight: normal;
   }
 
-  a.btn:after {
-    content: " \BB";
+  a.btn {
+    &:after {
+      content: " \BB";
+    }
   }
 }
 
 /* WHITE PAPERS */
+
 .sidebar {
+  .make-lg-column(3);
+  .header;
+  font-size: @font-size-large;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.sidebar-sticky {
+  position: absolute;
+  right:  @font-size-small;
+  bottom: @font-size-small;
+  left:   @font-size-small;
+}
+
+/* About section */
+.sidebar-title h1 {
+  // margin-top: 0;
+  // font-size: 3.25rem;
+  // margin-bottom: -.5rem;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  // margin-bottom: 1rem;
+}
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar-nav li a:hover,
+.sidebar-nav li a:focus {
+  text-decoration: underline;
+}
+.sidebar-nav li a.active {
+  font-weight: bold;
+}
+
+.sidebar-nav li.header {
+  margin-top: @line-height-computed*0.5;
 }
 
 .copy {
-  
+  .make-lg-column(6);
+  .make-lg-column-push(3);
+  font-size: @font-size-large;
 }

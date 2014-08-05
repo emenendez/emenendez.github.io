@@ -3,11 +3,12 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: temp
+name: emenendez.github.io
 description: Tools, techniques, and strategies for wildland search & rescue.
 author:
   name: Eric Menendez
   email: ericmenendez@gmail.com
+  url: https://github.com/emenendez
 
 # Grunt handles images and assets.
 exclude: ['img', 'css', 'js', 'fonts',
@@ -24,3 +25,10 @@ markdown: redcarpet
 #   extensions: ['fenced_code_blocks', 'smart']
 
 pygments: true
+
+# Permalinks
+permalink:        pretty
+
+# Custom vars
+github:
+  repo:           https://github.com/emenendez/emenendez.github.io

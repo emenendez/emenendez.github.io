@@ -21,9 +21,9 @@ module.exports = function (grunt) {
       dist: 'dist'
     },
     watch: {
-      sass: {
-        files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
-        tasks: ['sass:server', 'autoprefixer:server']
+      less: {
+        files: ['<%= yeoman.app %>/_less/**/*.less'],
+        tasks: ['less', 'autoprefixer:server']
       },
       autoprefixer: {
         files: ['<%= yeoman.app %>/css/**/*.css'],
@@ -102,34 +102,17 @@ module.exports = function (grunt) {
         '.jekyll'
       ]
     },
-    sass: {
-      options: {
-        bundleExec: true,
-        debugInfo: false,
-        lineNumbers: false,
-        loadPath: 'app/_bower_components'
-      },
+    less: {
       dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/_scss',
-          src: '**/*.{scss,sass}',
-          dest: '.tmp/css',
-          ext: '.css'
-        }]
-      },
-      server: {
-        options: {
-          debugInfo: true,
-          lineNumbers: true
+        files: {
+          '.tmp/css/main.css': ['<%= yeoman.app %>/_less/main.less']
         },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/_scss',
-          src: '**/*.{scss,sass}',
-          dest: '.tmp/css',
-          ext: '.css'
-        }]
+        options: {
+          sourceMap: true,
+          sourceMapFilename: '<%= yeoman.app %>/_less/main.css.map',
+          sourceMapBasepath: '<%= yeoman.app %>/',
+          sourceMapRootpath: '/'
+        }
       }
     },
     autoprefixer: {
@@ -316,18 +299,18 @@ module.exports = function (grunt) {
       check: {
         src: [
           '<%= yeoman.app %>/css/**/*.css',
-          '<%= yeoman.app %>/_scss/**/*.scss'
+          '<%= yeoman.app %>/_less/**/*.less'
         ]
       }
     },
     concurrent: {
       server: [
-        'sass:server',
+        'less',
         'copy:stageCss',
         'jekyll:server'
       ],
       dist: [
-        'sass:dist',
+        'less:dist',
         'copy:dist'
       ]
     }
@@ -363,7 +346,7 @@ module.exports = function (grunt) {
   grunt.registerTask('check', [
     'clean:server',
     'jekyll:check',
-    'sass:server',
+    'less',
     'jshint:all',
     'csslint:check'
   ]);

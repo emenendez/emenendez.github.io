@@ -6,13 +6,16 @@
 
 @import "bootstrap/bootstrap.less";
 
+/* Variables */
+@link-underline: 2px;
+
+
 /* GLOBAL STYLES
 -------------------------------------------------- */
-/* Padding below the footer and lighter body text */
+/* Padding below the footer */
 
 body {
-  padding-bottom: 40px;
-  color: #5a5a5a;
+  padding-bottom: @font-size-base;
   // background: url('../img/concrete_wall_3.png');
   // background: url('../img/natural_paper.png');
   background: url('../img/scribble_light.png');
@@ -28,7 +31,7 @@ body {
   text-align: center;
   background: url('../img/cartographer.png');
   color: @gray-lighter;
-  font-family:  @font-family-headings;
+  font-family: @font-family-headings;
 }
 
 /* Nav links */
@@ -40,9 +43,11 @@ body {
     & > a {
       padding-right: 0;
       padding-left: 0;
+      padding-bottom: 0;
+      font-size: @font-size-large;
       // color: #fff; /* IE8 proofing */
       // color: rgba(255,255,255,.75);
-      border-bottom: 2px solid transparent;
+      border-bottom: @link-underline solid transparent;
 
       &:hover,
       &:focus {
@@ -51,10 +56,6 @@ body {
         border-bottom-color: rgba(255,255,255,.25);
       }
     }
-  }
-
-  & > li + li {
-    margin-left: 20px;
   }
 
   & > .active {
@@ -66,6 +67,9 @@ body {
     }
   }
   
+  & > li + li {
+    margin-left: @line-height-computed;
+  }
 }
 
 /* MARKETING CONTENT
@@ -82,29 +86,4 @@ body {
 .marketing .col-lg-4 p {
   margin-right: 10px;
   margin-left: 10px;
-}
-
-/* RESPONSIVE CSS
--------------------------------------------------- */
-
-@media (min-width: 768px) {
-
-  /* Navbar positioning foo */
-  .navbar-wrapper {
-    margin-top: 20px;
-  }
-  .navbar-wrapper .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  .navbar-wrapper .navbar {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  /* The navbar becomes detached from the top, so we round the corners */
-  .navbar-wrapper .navbar {
-    border-radius: 4px;
-  }
-
 }

@@ -106,8 +106,8 @@ footer {
 /* WHITE PAPERS */
 
 .sidebar {
-  .make-lg-column(3);
   .header;
+  width: 380px;  // consider reducing by 20px or so if site name changes
   font-size: @font-size-large;
   position: fixed;
   top: 0;
@@ -155,7 +155,13 @@ footer {
   font-size: @font-size-medium;
 
   & > div,
-  & > p {
+  & > p,
+  & > h1,
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6 {
     width: 560px;
   }
 

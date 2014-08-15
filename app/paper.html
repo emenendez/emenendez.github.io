@@ -19,40 +19,37 @@
     <![endif]-->
   </head>
   <body>
-
-    <div class="container">
-
-      <div class="row">
-        <div class="sidebar">
-          <div class="sidebar-sticky">
-            <div class="sidebar-title">
-              <h1>
-                <a href="http://emenendez.github.io">
-                  emenendez.github.io
-                </a>
-              </h1>
-              <p>tools, techniques, and strategies for wildland search &amp; rescue</p>
-            </div>
-
-            <nav class="sidebar-nav">
-              <ul>
-                <li><a class="" href="{{ site.baseurl }}">Home</a></li>
-                <li><a class="active" href="{{ node.url }}">About</a></li>
-                <li><a class="" href="{{ node.url }}">Contact</a></li>
-
-                <li class="header">White papers</li>
-                <li><a class="" href="{{ node.url }}">A Workflow for Remote Support</a></li>
-                <li><a class="" href="{{ node.url }}">Searching Without Segments</a></li>
-                <li><a class="" href="{{ node.url }}">The Command Post of the Future</a></li>
-              </ul>
-            </nav>
-
-            <footer>
-              <p class="pull-right">GitHub Twitter</p>
-              <p>Licensed <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>.</p>
-            </footer>
-          </div>
+    <div class="sidebar">
+      <div class="sidebar-sticky">
+        <div class="sidebar-title">
+          <h1>
+            <a href="http://emenendez.github.io">
+              emenendez.github.io
+            </a>
+          </h1>
+          <p>tools, techniques, and strategies for wildland search &amp; rescue</p>
         </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li><a class="" href="{{ site.baseurl }}">Home</a></li>
+            <li><a class="active" href="{{ node.url }}">About</a></li>
+            <li><a class="" href="{{ node.url }}">Contact</a></li>
+
+            <li class="header">White papers</li>
+            <li><a class="" href="{{ node.url }}">A Workflow for Remote Support</a></li>
+            <li><a class="" href="{{ node.url }}">Searching Without Segments</a></li>
+            <li><a class="" href="{{ node.url }}">The Command Post of the Future</a></li>
+          </ul>
+        </nav>
+
+        <footer>
+          <p class="pull-right">GitHub Twitter</p>
+          <p>Licensed <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>.</p>
+        </footer>
+      </div>
+    </div>
+
         <div class="copy">
           <h1 class="page-title">A Workflow for Remote Support</h1>
 
@@ -81,19 +78,19 @@ This document describes a workflow for incorporating remote support into a typic
 <li>Creates an incident folder on the SMRG Dropbox</li>
 <li>Begins email chain to include all responding staff, remote support resources, and dispatchers (&#8220;incident email list&#8221;)</li>
 </ul></li>
-<li><p>The remote support team assembles relevant data and generates initial products. All remote support products are delivered via the Dropbox incident folder and incident email list.</p>
+<li>
+<blockquote>Goal: Deliver initial products before the first responder arrives on scene
+</blockquote>
+
+<blockquote>If reliable internet access is unavailable at the ICP, the second responder should stop just before leaving wireless coverage to download initial products.
+</blockquote>
+<p>The remote support team assembles relevant data and generates initial products. All remote support products are delivered via the Dropbox incident folder and incident email list.</p>
 
 <ul>
 <li>General-purpose maps of a variety of scales, using appropriate basemaps and other data, depicting planning point(s) and ICP (if known)</li>
 </ul>
 
-<blockquote>
- Goal: Deliver initial products before the first responder arrives on scene
-</blockquote>
-
-<blockquote>
- If reliable internet access is unavailable at the ICP, the second responder should stop just before leaving wireless coverage to download initial products.
-</blockquote></li>
+</li>
 <li><p>Responders arrive on scene, print general-purpose maps, and immediately begin hasty tasks.</p>
 
 <ul>
@@ -171,15 +168,10 @@ SMRG has one-sided TAFs available to SAR personnel and teams at nominal cost
 <li><p>1:12,000-scale task maps are often much clearer than 1:24,000-scale maps. However, it can be difficult for the field team to locate their task area relative to the ICP. When necessary, create an additional transportation map appropriate for field teams to use for travel to their tasks.</p></li>
 </ul>
         </div>
-      </div><!-- /.row -->
 
-      <!-- FOOTER -->
       <footer>
         <p class="text-center"><a href="#">Back to top</a></p>
       </footer>
-
-    </div><!-- /.container -->
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

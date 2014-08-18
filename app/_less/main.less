@@ -150,6 +150,23 @@ footer {
   top: 0;
   left: 0;
   bottom: 0;
+
+  nav {
+    h2 {
+      font-size: @font-size-large;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      a.active {
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 .sidebar-sticky {
@@ -157,31 +174,6 @@ footer {
   right:  @font-size-small;
   bottom: @font-size-small;
   left:   @font-size-small;
-}
-
-.sidebar-title h1 {
-  // margin-top: 0;
-  // font-size: 3.25rem;
-  // margin-bottom: -.5rem;
-}
-
-.sidebar-nav {
-  // margin-bottom: 1rem;
-}
-.sidebar-nav ul {
-  list-style: none;
-  padding: 0;
-}
-.sidebar-nav li a:hover,
-.sidebar-nav li a:focus {
-  text-decoration: underline;
-}
-.sidebar-nav li a.active {
-  font-weight: bold;
-}
-
-.sidebar-nav li.header {
-  margin-top: @line-height-computed*0.5;
 }
 
 /* Content */

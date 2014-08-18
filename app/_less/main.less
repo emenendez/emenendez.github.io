@@ -9,7 +9,7 @@
 /* VARIABLES
 -------------------------------------------------- */
 // Header
-@link-underline: 2px;
+@header-link-underline: 2px;
 
 // Sidebar
 @sidebar-width: 380px;  // consider reducing by 20px or so if site name changes
@@ -22,6 +22,9 @@
 
 @font-size-medium:    ceil((@font-size-base * 1.1));
 @line-height-content: 1.48;
+
+// Footer
+@footer-link-underline: 1px;
 
 
 /* MIXINS
@@ -43,6 +46,24 @@ body {
   // background: url('../img/natural_paper.png');
   background: url('../img/scribble_light.png');
   // background: url('../img/wall4.png');
+}
+
+footer {
+  font-size: @font-size-small;
+  font-family: @font-family-serif;
+
+  p {
+    margin: 0;
+  }
+  
+  a {
+    border-bottom: @footer-link-underline solid transparent;
+
+    &:hover {
+      text-decoration: none;
+      border-bottom-color: @link-hover-color;
+    }
+  }
 }
 
 .social-media {
@@ -71,7 +92,7 @@ body {
       font-size: @font-size-large;
       // color: #fff; /* IE8 proofing */
       // color: rgba(255,255,255,.75);
-      border-bottom: @link-underline solid transparent;
+      border-bottom: @header-link-underline solid transparent;
 
       &:hover,
       &:focus {
@@ -93,14 +114,6 @@ body {
   
   & > li + li {
     margin-left: @line-height-computed;
-  }
-}
-
-footer {
-  font-size: @font-size-small;
-  font-family: @font-family-serif;
-  p {
-    margin: 0;
   }
 }
 

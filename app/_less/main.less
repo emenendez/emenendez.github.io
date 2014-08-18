@@ -23,6 +23,9 @@
 @font-size-medium:    ceil((@font-size-base * 1.1));
 @line-height-content: 1.45;
 
+// Quotes
+@quote-border: 2px solid @gray;
+
 // Footer
 @footer-link-underline: 1px;
 
@@ -208,12 +211,21 @@ footer {
     font-size: @font-size-base;
     padding: 0;
     padding-left: 5px;
-    border-left: 2px solid @gray;
+    border-left: @quote-border;
   }
 }
 
 .version {
   color: @gray;
+}
+
+.intro {
+  border-top: @quote-border;
+  border-bottom: @quote-border;
+  padding: floor(@line-height-computed / 2);
+  font-style: italic;
+  font-size: @font-size-base;
+  margin-bottom: @line-height-computed;
 }
 
 ol, ul {
@@ -224,7 +236,7 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin-bottom: (@line-height-computed / 2);
+  margin-bottom: floor(@line-height-computed / 2);
 }
 
 // Possible color schemes, basE16:

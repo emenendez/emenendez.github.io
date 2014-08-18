@@ -16,9 +16,12 @@
 
 // Content
 @content-width: 560px;
-@gutter-width: 200px;
+@gutter-width:  200px;
 @gutter-margin: 10px;
-@list-padding: 40px;
+@list-padding:  40px;
+
+@font-size-medium:    ceil((@font-size-base * 1.1));
+@line-height-content: 1.48;
 
 
 /* MIXINS
@@ -118,7 +121,8 @@ footer {
   }
 }
 
-/* WHITE PAPERS */
+/* WHITE PAPERS
+-------------------------------------------------- */
 
 .sidebar {
   .header;
@@ -168,6 +172,7 @@ footer {
   margin-right: auto;
   padding-left: @gutter-width + @gutter-margin;
   font-size: @font-size-medium;
+  line-height: @line-height-content;
 
   & > div,
   & > p,

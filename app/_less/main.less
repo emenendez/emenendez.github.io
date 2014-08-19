@@ -30,8 +30,9 @@
 @footer-link-underline: 1px;
 
 // Screen sizes
-@screen-lg-min: 2*max(@sidebar-width, @gutter-width) + @content-width + 2*@gutter-margin;
-@screen-md-min: max(@sidebar-width, @gutter-width) + @content-width + @gutter-width + 2*@gutter-margin;
+// Assume @sidebar-width > @gutter-width
+@screen-lg-min: 2*@sidebar-width + @content-width + 2*@gutter-margin;
+@screen-md-min: @sidebar-width + @content-width + @gutter-width + 2*@gutter-margin;
 @screen-sm-min: 2*@gutter-width + @content-width + 2*@gutter-margin;
 
 /* MIXINS

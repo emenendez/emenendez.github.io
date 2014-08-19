@@ -31,9 +31,9 @@
 
 // Screen sizes
 // Assume @sidebar-width > @gutter-width
-@screen-lg-min: 2*@sidebar-width + @content-width + 2*@gutter-margin;
-@screen-md-min: @sidebar-width + @content-width + @gutter-width + 2*@gutter-margin;
-@screen-sm-min: 2*@gutter-width + @content-width + 2*@gutter-margin;
+@screen-lg-min: (2*@sidebar-width + @content-width + 2*@gutter-margin);
+@screen-md-min: (@sidebar-width + @content-width + @gutter-width + 2*@gutter-margin);
+@screen-sm-min: (2*@gutter-width + @content-width + 2*@gutter-margin);
 
 /* MIXINS
 -------------------------------------------------- */
@@ -186,12 +186,21 @@ footer {
 
 /* Content */
 .copy {
-  width: @content-width + 2*@gutter-width + 2*@gutter-margin;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: @gutter-width + @gutter-margin;
+  // Medium screens
+  width: @sidebar-width + @content-width + @gutter-width + 2*@gutter-margin;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: @sidebar-width + @gutter-margin;
   font-size: @font-size-medium;
   line-height: @line-height-content;
+
+  // Large screens
+  @media (min-width: @screen-lg-min) {
+    width: @content-width + 2*@gutter-width + 2*@gutter-margin;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: @gutter-width + @gutter-margin;
+  }
 
   & > div,
   & > p,

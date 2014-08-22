@@ -36,6 +36,9 @@
 @screen-lg-min: (@sidebar-width + 2*@gutter-margin + @content-width + 2*@gutter-margin + @sidebar-width + @scrollbar-extra);
 @screen-md-min: (2*@gutter-margin + 2*@gutter-margin + @content-width + @gutter-margin + @gutter-width + 2*@gutter-margin + @gutter-margin + @scrollbar-extra);
 
+// Transitions
+@transitions: 0.2s;
+
 /* MIXINS
 -------------------------------------------------- */
 .header() {
@@ -151,14 +154,40 @@ footer {
 -------------------------------------------------- */
 
 /* Sidebar */
+
+.sidebar-visible() {
+  left: 0;
+}
+
 .sidebar {
   .header;
-  width: @sidebar-width;
+
+  // Small screens
+  display: none;
+
+  // Medium screens
+  @media (min-width: @screen-md-min) {
+    display: block;
+    left: 2*@gutter-margin - @sidebar-width;
+    width: @sidebar-width;
+    transition-duration: @transitions;
+
+    &:hover, &.visible {
+      .sidebar-visible;
+    }
+  }
+  
+  // Large screens
+  @media (min-width: @screen-lg-min) {
+    .sidebar-visible;
+    transition-duration: 0;
+  }
+
   font-size: @font-size-large;
   position: fixed;
   top: 0;
-  left: 0;
   bottom: 0;
+  
 
   nav {
     h2 {
@@ -180,7 +209,7 @@ footer {
 
 .sidebar-sticky {
   position: absolute;
-  right:  @font-size-small;
+  right:  2*@gutter-margin;
   bottom: @font-size-small;
   left:   @font-size-small;
 }
@@ -191,9 +220,9 @@ footer {
   width: @content-width + @gutter-margin + @gutter-width;
   margin-left: auto;
   margin-right: auto;
-  // padding-left: @gutter-margin;
   font-size: @font-size-medium;
   line-height: @line-height-content;
+  transition-duration: @transitions;
 
   // Large screens
   @media (min-width: @screen-lg-min) {
@@ -201,6 +230,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     padding-left: @gutter-width + @gutter-margin;
+    transition-duration: 0;
   }
 
   & > div,

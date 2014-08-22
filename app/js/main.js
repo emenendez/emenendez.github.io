@@ -19,3 +19,21 @@
     document.querySelector('head').appendChild(msViewportStyle)
   }
 })();
+
+$( document ).ready(function() {
+  var target = $('.sidebar');
+
+  var mc = new Hammer.Manager($('body').get(0));
+  mc.add( new Hammer.Swipe({ direction: Hammer.DIRECTION_HORIZONTAL }) );
+
+  mc.on('swipe', function(ev) {
+    if (ev.direction == Hammer.DIRECTION_RIGHT) {
+      target.addClass('visible');  
+    }
+    else if (ev.direction == Hammer.DIRECTION_LEFT) {
+      target.removeClass('visible');
+    }
+  });
+
+});
+

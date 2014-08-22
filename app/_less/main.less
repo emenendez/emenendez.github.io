@@ -15,10 +15,12 @@
 @sidebar-width: 380px;  // consider reducing by 20px or so if site name changes
 
 // Content
-@content-width: 560px;
-@gutter-width:  200px;
-@gutter-margin: 10px;
-@list-padding:  40px;
+@content-width:   560px;
+@gutter-width:    200px;
+@gutter-margin:    10px;
+@list-padding:     40px;
+@scrollbar-extra:  14px;
+
 
 @font-size-medium:    ceil((@font-size-base * 1.1));
 @line-height-content: 1.45;
@@ -31,9 +33,8 @@
 
 // Screen sizes
 // Assume @sidebar-width > @gutter-width
-@screen-lg-min: (2*@sidebar-width + @content-width + 2*@gutter-margin);
-@screen-md-min: (@sidebar-width + @content-width + @gutter-width + 2*@gutter-margin);
-@screen-sm-min: (2*@gutter-width + @content-width + 2*@gutter-margin);
+@screen-lg-min: (@sidebar-width + 2*@gutter-margin + @content-width + 2*@gutter-margin + @sidebar-width + @scrollbar-extra);
+@screen-md-min: (2*@gutter-margin + 2*@gutter-margin + @content-width + @gutter-margin + @gutter-width + 2*@gutter-margin + @gutter-margin + @scrollbar-extra);
 
 /* MIXINS
 -------------------------------------------------- */
@@ -187,16 +188,16 @@ footer {
 /* Content */
 .copy {
   // Medium screens
-  width: @sidebar-width + @content-width + @gutter-width + 2*@gutter-margin;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: @sidebar-width + @gutter-margin;
+  width: @content-width + @gutter-margin + @gutter-width;
+  margin-left: auto;
+  margin-right: auto;
+  // padding-left: @gutter-margin;
   font-size: @font-size-medium;
   line-height: @line-height-content;
 
   // Large screens
   @media (min-width: @screen-lg-min) {
-    width: @content-width + 2*@gutter-width + 2*@gutter-margin;
+    width: @gutter-width + @gutter-margin + @content-width + @gutter-margin + @gutter-width;
     margin-left: auto;
     margin-right: auto;
     padding-left: @gutter-width + @gutter-margin;

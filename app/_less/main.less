@@ -233,20 +233,17 @@ footer {
     transition-duration: 0;
   }
 
-  & > div,
-  & > p,
-  & > h1,
-  & > h2,
-  & > h3,
-  & > h4,
-  & > h5,
-  & > h6 {
+  & > * {
     width: @content-width;
   }
 
-  & > ul > li > *,
-  & > ol > li > * {
-    width: @content-width - @list-padding;
+  & > ol,
+  & > ul {
+    width: @content-width + @gutter-margin + @gutter-width;
+
+    & > li > * {
+      width: @content-width - @list-padding;
+    }
   }
 
   li > blockquote {
@@ -275,13 +272,10 @@ footer {
 
 ol, ul {
   padding-left: @list-padding;
-}
 
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin-bottom: floor(@line-height-computed / 2);
+  ol, ul {
+    margin-bottom: floor(@line-height-computed / 2);
+  }
 }
 
 // Possible color schemes, basE16:

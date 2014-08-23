@@ -1,0 +1,67 @@
+/* CUSTOMIZE THE JUMBOTRON
+-------------------------------------------------- */
+
+/* Carousel base class */
+.jumbotron {
+  text-align: center;
+  .header;
+}
+
+/* Nav links */
+
+.nav {
+  & > li {
+    display: inline-block;
+
+    & > a {
+      padding-right: 0;
+      padding-left: 0;
+      padding-bottom: 0;
+      font-size: @font-size-large;
+      // color: #fff; /* IE8 proofing */
+      // color: rgba(255,255,255,.75);
+      border-bottom: @header-link-underline solid transparent;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        border-bottom-color: #a9a9a9;
+        border-bottom-color: rgba(255,255,255,.25);
+      }
+    }
+  }
+
+  & > .active {
+    & > a,
+    & > a:hover,
+    & > a:focus {
+      // color: #fff;
+      // border-bottom-color: #fff;
+    }
+  }
+  
+  & > li + li {
+    margin-left: @line-height-computed;
+  }
+}
+
+/* WHITEPAPER PANELS
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.papers {
+  .col-md-4 {
+    margin-bottom: @line-height-computed;
+    text-align: center;
+  }
+  
+  h2 {
+    font-weight: normal;
+  }
+
+  a.btn {
+    &:after {
+      content: " \BB";
+    }
+  }
+}

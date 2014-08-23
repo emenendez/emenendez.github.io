@@ -1,0 +1,129 @@
+/* WHITE PAPERS
+-------------------------------------------------- */
+
+/* Sidebar */
+
+.sidebar-visible() {
+  left: 0;
+}
+
+.sidebar {
+  .header;
+
+  // Small screens
+  position: relative;
+
+  // Medium screens
+  @media (min-width: @screen-md-min) {
+    position: fixed;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 2*@gutter-margin - @sidebar-width;
+    width: @sidebar-width;
+    transition-duration: @transitions;
+
+    &:hover, &.visible {
+      .sidebar-visible;
+    }
+  }
+  
+  // Large screens
+  @media (min-width: @screen-lg-min) {
+    .sidebar-visible;
+    transition-duration: 0;
+  }
+
+  font-size: @font-size-large;
+  
+
+  nav {
+    h2 {
+      font-size: @font-size-large;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      a.active {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.sidebar-sticky {
+  // Medium screens
+  @media (min-width: @screen-md-min) {
+    position: absolute;
+    right:  2*@gutter-margin;
+    bottom: @font-size-small;
+    left:   @font-size-small;
+  }
+}
+
+/* Content */
+.copy {
+  // Medium screens
+  width: @content-width + @gutter-margin + @gutter-width;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: @font-size-medium;
+  line-height: @line-height-content;
+  transition-duration: @transitions;
+
+  // Large screens
+  @media (min-width: @screen-lg-min) {
+    width: @gutter-width + @gutter-margin + @content-width + @gutter-margin + @gutter-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: @gutter-width + @gutter-margin;
+    transition-duration: 0;
+  }
+
+  & > * {
+    width: @content-width;
+  }
+
+  & > ol,
+  & > ul {
+    width: @content-width + @gutter-margin + @gutter-width;
+
+    & > li > * {
+      width: @content-width - @list-padding;
+    }
+  }
+
+  li > blockquote {
+    width: @gutter-width;
+    float: right;
+    clear: both;
+    font-size: @font-size-base;
+    padding: 0;
+    padding-left: floor(@line-height-computed / 4);
+    border-left: @quote-border;
+  }
+}
+
+.version {
+  color: @gray;
+}
+
+.intro {
+  border-top: @quote-border;
+  border-bottom: @quote-border;
+  padding: floor(@line-height-computed / 2);
+  font-size: @font-size-base;
+  margin-bottom: @line-height-computed;
+}
+
+ol, ul {
+  padding-left: @list-padding;
+
+  ol, ul {
+    margin-bottom: floor(@line-height-computed / 2);
+  }
+}

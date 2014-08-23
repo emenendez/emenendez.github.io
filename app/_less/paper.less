@@ -1,6 +1,15 @@
 /* WHITE PAPERS
 -------------------------------------------------- */
 
+// Mixins
+.blockquote() {
+  font-size: @font-size-base;
+  padding: 0;
+  padding-left: floor(@line-height-computed / 4);
+  margin-bottom: @line-height-computed;
+  border-left: @quote-border;
+}
+
 /* Sidebar */
 
 .sidebar-visible() {
@@ -73,44 +82,49 @@
 
 /* Content */
 .copy {
-  // Medium screens
-  width: @content-width + @gutter-margin + @gutter-width;
-  margin-left: auto;
-  margin-right: auto;
+  // Small screens
   font-size: @font-size-medium;
   line-height: @line-height-content;
-  transition-duration: @transitions;
+  max-width: @content-width;
+  margin: 0 auto;
+  padding: 0 @gutter-margin;
+
+  li > blockquote {
+    .blockquote;
+  }
+
+  // Medium screens
+  @media (min-width: @screen-md-min) {
+    max-width: none;
+    width: @content-width + @gutter-margin + @gutter-width;
+    padding: 0;
+    transition-duration: @transitions;
+
+    & > * {
+      width: @content-width;
+    }
+
+    & > ol,
+    & > ul {
+      width: @content-width + @gutter-margin + @gutter-width;
+
+      & > li > * {
+        width: @content-width - @list-padding;
+      }
+    }
+
+    li > blockquote {
+      float: right;
+      clear: both;
+      width: @gutter-width;
+    }
+  }
 
   // Large screens
   @media (min-width: @screen-lg-min) {
     width: @gutter-width + @gutter-margin + @content-width + @gutter-margin + @gutter-width;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: @gutter-width + @gutter-margin;
     transition-duration: 0;
-  }
-
-  & > * {
-    width: @content-width;
-  }
-
-  & > ol,
-  & > ul {
-    width: @content-width + @gutter-margin + @gutter-width;
-
-    & > li > * {
-      width: @content-width - @list-padding;
-    }
-  }
-
-  li > blockquote {
-    width: @gutter-width;
-    float: right;
-    clear: both;
-    font-size: @font-size-base;
-    padding: 0;
-    padding-left: floor(@line-height-computed / 4);
-    border-left: @quote-border;
   }
 }
 
@@ -119,11 +133,11 @@
 }
 
 .intro {
+  .blockquote;
+  padding: floor(@line-height-computed / 2);
+  border-left: none;
   border-top: @quote-border;
   border-bottom: @quote-border;
-  padding: floor(@line-height-computed / 2);
-  font-size: @font-size-base;
-  margin-bottom: @line-height-computed;
 }
 
 ol, ul {

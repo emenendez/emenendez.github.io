@@ -12,6 +12,7 @@
 
   // Small screens
   position: relative;
+  text-align: center;
 
   // Medium screens
   @media (min-width: @screen-md-min) {
@@ -22,6 +23,7 @@
     left: 2*@gutter-margin - @sidebar-width;
     width: @sidebar-width;
     transition-duration: @transitions;
+    text-align: left;
 
     &:hover, &.visible {
       .sidebar-visible;
@@ -56,6 +58,9 @@
 }
 
 .sidebar-sticky {
+  // Small screens
+  padding: @font-size-small;
+
   // Medium screens
   @media (min-width: @screen-md-min) {
     position: absolute;

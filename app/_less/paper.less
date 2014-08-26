@@ -20,19 +20,20 @@
   .header;
 
   // Small screens
-  position: relative;
-  text-align: center;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: @sidebar-height;
+  
   // Medium screens
   @media (min-width: @screen-md-min) {
-    position: fixed;
     display: block;
-    top: 0;
     bottom: 0;
     left: 2*@gutter-margin - @sidebar-width;
     width: @sidebar-width;
+    height: auto;
     transition-duration: @transitions;
-    text-align: left;
 
     &:hover, &.visible {
       .sidebar-visible;
@@ -70,6 +71,14 @@
   // Small screens
   padding: @font-size-small;
 
+  & > * {
+    display: none;
+  }
+
+  & > h1 {
+    display: block;
+  }
+
   // Medium screens
   @media (min-width: @screen-md-min) {
     position: absolute;
@@ -77,6 +86,10 @@
     bottom: @font-size-small;
     left:   @font-size-small;
     padding: 0;
+
+    & > * {
+      display: block;
+    }
   }
 }
 
@@ -86,8 +99,8 @@
   font-size: @font-size-medium;
   line-height: @line-height-content;
   max-width: @content-width;
-  margin: 0 auto;
-  padding: 0 @gutter-margin;
+  margin: auto;
+  padding: @sidebar-height @gutter-margin 0;
 
   li > blockquote {
     .blockquote;

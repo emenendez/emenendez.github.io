@@ -21,6 +21,7 @@
 })();
 
 $( document ).ready(function() {
+  delete Hammer.defaults.cssProps.userSelect;
   var target = $('.sidebar');
 
   var mc = new Hammer.Manager($('body').get(0));
@@ -36,4 +37,3 @@ $( document ).ready(function() {
   });
 
 });
-

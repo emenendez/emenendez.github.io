@@ -60,18 +60,39 @@
 
 /* Center align the text within the three columns below the carousel */
 .papers {
-  .col-md-4 {
-    margin-bottom: @line-height-computed;
-    text-align: center;
-  }
-  
+  width: 100%;
+  padding: 0 2*@gutter-margin;
+  text-align: center;
+}
+
+.paper {
+  display: inline-block;
+  width: @paper-width;
+  margin-bottom: @line-height-computed;
+  vertical-align: top;
+
   h2 {
     font-weight: normal;
+    text-align: center;
   }
 
-  a.btn {
-    &:after {
-      content: " \BB";
+  p {
+    text-align: left;
+  }
+
+  .action {
+    text-align: center;
+
+    a {
+      .btn;
+      .btn-default;
+      &:after {
+        content: " \BB";
+      }
     }
   }
+}
+
+.paper + .paper {
+  margin-left: 2*@gutter-margin;
 }

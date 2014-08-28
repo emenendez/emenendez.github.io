@@ -67,7 +67,7 @@
 
 .paper {
   display: inline-block;
-  width: @paper-width;
+  max-width: @paper-width;
   margin-bottom: @line-height-computed;
   vertical-align: top;
 
@@ -93,6 +93,13 @@
   }
 }
 
-.paper + .paper {
-  margin-left: 2*@gutter-margin;
+// Medium screens
+@media (min-width: @screen-md-min) {
+  .paper {
+    width: @paper-width;
+  }
+
+  .paper + .paper {
+    margin-left: 2*@gutter-margin;
+  }
 }

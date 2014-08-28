@@ -2,9 +2,27 @@
 -------------------------------------------------- */
 
 /* Carousel base class */
-.jumbotron {
-  text-align: center;
+.banner {
   .header;
+
+  padding: @banner-padding;
+  margin-bottom: @banner-padding;
+  text-align: center;
+
+  p {
+    margin-bottom: (@banner-padding / 2);
+    font-size: @jumbotron-font-size;
+    font-weight: 200;
+  }
+
+  @media screen and (min-width: @screen-md-min) {
+    padding-top:    (@banner-padding * 1.6);
+    padding-bottom: (@banner-padding * 1.6);
+
+    h1 {
+      font-size: (@font-size-base * 4.5);
+    }
+  }
 }
 
 /* Nav links */

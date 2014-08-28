@@ -32,7 +32,7 @@
 @line-height-content: 1.45;
 
 // Quotes
-@quote-border: 2px solid @green;
+@quote-border: 2px solid @border-color;
 
 // Footer
 @footer-link-underline: 1px;
@@ -54,10 +54,10 @@
   font-family: @font-family-headings;
 
   a {
-    color: @green;
+    color: @sidebar-link-color;
 
     &:hover {
-      color: @yellow;
+      color: @sidebar-link-hover-color;
     }
   }
 }
@@ -91,6 +91,10 @@ footer {
     &:hover {
       text-decoration: none;
       border-bottom-color: @link-hover-color;
+
+      .sidebar & {
+        border-bottom-color: @sidebar-link-hover-color;
+      }
     }
   }
 }

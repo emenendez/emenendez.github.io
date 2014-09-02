@@ -4,11 +4,7 @@
 // Mixins
 .blockquote() {
   font-family: @font-family-sans-serif;
-  font-size: @font-size-base;
   padding: 0;
-  padding-left: floor(@line-height-computed / 4);
-  margin-bottom: @line-height-computed;
-  border-left: @quote-border;
 }
 
 /* Sidebar */
@@ -83,6 +79,12 @@
 
   li > blockquote {
     .blockquote;
+    font-size: @font-size-base;
+    padding: floor(@line-height-computed / 4);
+    margin-bottom: floor(@line-height-computed / 2);
+
+    background-color: @base2;
+    color: @base01;
   }
 
   // Medium screens
@@ -109,6 +111,11 @@
       float: right;
       clear: both;
       width: @gutter-width;
+      padding: 0;
+      padding-left: floor(@line-height-computed / 4);
+      border-left: @quote-border;
+      background-color: transparent;
+      color: @text-color;
     }
   }
 
@@ -126,8 +133,9 @@
 
 .intro {
   .blockquote;
+  font-size: @font-size-medium;
   padding: floor(@line-height-computed / 2);
-  border-left: none;
+  margin-bottom: @line-height-computed;
   border-top: @quote-border;
   border-bottom: @quote-border;
 }

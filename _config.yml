@@ -28,7 +28,7 @@ markdown: kramdown
 pygments: true
 
 # Permalinks
-permalink:        pretty
+permalink:        /:title/index.html
 
 # Custom vars
 github:

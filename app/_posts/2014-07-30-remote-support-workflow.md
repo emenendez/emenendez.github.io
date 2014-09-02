@@ -3,7 +3,9 @@ layout: paper
 title: A Workflow for Remote Support
 
 version: 0.1.0
+icon:    fa-group
 tagline: Bring all your resources to bear on every search, whether or not everyone responds; arrive on scene ready to hit the ground running; free your incident staff of time-consuming mindless tasks and let them focus on planning the search.
+action:  Read more
 ---
 
 <p class="intro">This document describes a workflow for incorporating remote support into a typical wildland search &amp; rescue incident in Virginia and, more broadly, anywhere in the ASRC response area. It is not meant to be a step-by-step guide to managing a missing person incident. In particular, at no point should any of the steps below take precedence over critical thought and attention to the specific details of an individual incident.</p>

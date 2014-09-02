@@ -27,7 +27,7 @@ layout: default
         <i class="fa {{ node.icon }}"></i>
         <h2>{{ node.title }}</h2>
         <p>{{ node.tagline }}</p>
-        <p class="action"><a href="#" role="button">{{ node.action }}</a></p>
+        <p class="action"><a href="{{ node.url }}" role="button">{{ node.action }}</a></p>
       </div><!-- /.paper -->
     {% endif %}
   {% endfor %}

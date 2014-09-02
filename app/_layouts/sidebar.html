@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div class="sidebar">
+  <div class="sidebar-sticky">
+    <h1><a href="http://emenendez.github.io">emenendez<span class="github">.github.io</span></a></h1>
+    <p>tools, techniques, and strategies for wildland search &amp; rescue</p>
+
+    <nav>
+      <ul>
+        <li><a class="" href="{{ site.baseurl }}">Home</a></li>
+        {% assign pages_list = site.pages %}
+      	{% for node in pages_list %}
+        	{% if node.title != null %}
+          	{% if node.layout == "page" %}
+			        <li><a class="{% if page.url == node.url %}active{% endif %}" href="{{ node.url }}">{{ node.title }}</a></li>
+    	      {% endif %}
+      	  {% endif %}
+      	{% endfor %}
+      </ul>
+
+      <h2>White papers</h2>
+      <ul>
+        <li><a class="active" href="{{ node.url }}">A Workflow for Remote Support</a></li>
+        <li><a class="" href="{{ node.url }}">Searching Without Segments</a></li>
+        <li><a class="" href="{{ node.url }}">The Command Post of the Future</a></li>
+
+        {% assign papers_list = site.pages %}
+      	{% for node in papers_list %}
+        	{% if node.title != null %}
+          	{% if node.layout == "paper" %}
+			        <li><a class="{% if page.url == node.url %}active{% endif %}" href="{{ node.url }}">{{ node.title }}</a></li>
+    	      {% endif %}
+      	  {% endif %}
+      	{% endfor %}
+
+      </ul>
+    </nav>
+
+
+
+
+
+    <footer>
+      <p class="social-media"><a href="https://github.com/emenendez/emenendez.github.io"><i class="fa fa-github"></i></a> <a href="https://twitter.com/ericrmenendez"><i class="fa fa-twitter"></i></a></p>
+      <p class="license">Licensed <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>.</p>
+    </footer>
+  </div>
+</div>
+
+{{ content }}

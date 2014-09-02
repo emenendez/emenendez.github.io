@@ -1,0 +1,114 @@
+/* CUSTOMIZE THE JUMBOTRON
+-------------------------------------------------- */
+
+/* Carousel base class */
+.banner {
+  .header;
+
+  padding: @banner-padding;
+  margin-bottom: @banner-padding;
+  text-align: center;
+
+  p {
+    margin-bottom: (@banner-padding / 2);
+    font-family: @font-family-serif;
+    font-size: @jumbotron-font-size;
+    font-weight: 400;
+  }
+
+  @media screen and (min-width: @screen-md-min) {
+    padding-top:    (@banner-padding * 1.6);
+    padding-bottom: (@banner-padding * 1.6);
+
+    h1 {
+      font-size: (@font-size-base * 4.5);
+    }
+  }
+
+  /* Nav links */
+
+  nav {
+    ul {
+      padding: 0;
+    }
+    
+    li {
+      display: inline-block;
+
+      & > a {
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0;
+        border-bottom: @header-link-underline solid transparent;
+        font-size: @font-size-large;
+
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          border-bottom-color: #a9a9a9;
+          border-bottom-color: rgba(255,255,255,.25);
+          text-decoration: none;
+        }
+      }
+    }
+
+    li + li {
+      margin-left: @line-height-computed;
+    }
+  }
+
+}
+
+
+/* WHITEPAPER PANELS
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.papers {
+  width: 100%;
+  padding: 0 2*@gutter-margin;
+  text-align: center;
+}
+
+.paper {
+  display: inline-block;
+  max-width: @paper-width;
+  margin-bottom: @line-height-computed;
+  vertical-align: top;
+
+  i {
+    font-size: @paper-icon-size;
+  }
+
+  h2 {
+    font-weight: normal;
+    text-align: center;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  .action {
+    text-align: center;
+
+    a {
+      .btn;
+      .btn-default;
+      &:after {
+        content: " \BB";
+      }
+    }
+  }
+}
+
+// Medium screens
+@media (min-width: @screen-md-min) {
+  .paper {
+    width: @paper-width;
+  }
+
+  .paper + .paper {
+    margin-left: 2*@gutter-margin;
+  }
+}

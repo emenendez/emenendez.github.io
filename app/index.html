@@ -5,8 +5,8 @@ layout: default
 <!-- Carousel
 ================================================== -->
 <div class="banner">
-	<h1>emenendez<span class="github">.github.io</span></h1>
-  <p>tools, techniques, and strategies for wildland search &amp; rescue</p>
+	<h1>{{ site.name }}</span></h1>
+  <p>{{ site.description }}</p>
   <nav>
     <ul>
       <li class="{% if page.url == site.url %}active{% endif %}"><a href="{{ site.url }}">Home</a></li>
@@ -36,10 +36,6 @@ layout: default
     {% endif %}
   {% endfor %}
 
-  <!-- FOOTER -->
-  <footer>
-    <p class="social-media"><a href="https://github.com/emenendez/emenendez.github.io"><i class="fa fa-github"></i></a> <a href="https://twitter.com/ericrmenendez"><i class="fa fa-twitter"></i></a></p>
-    <p class="license">Licensed <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>.</p>
-  </footer>
+ {% include footer.html %}
 
 </div><!-- /.papers -->

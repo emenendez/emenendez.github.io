@@ -4,8 +4,8 @@ layout: default
 
 <div class="sidebar">
   <div class="sidebar-sticky">
-    <h1><a href="{{ site.url }}">emenendez<span class="github">.github.io</span></a></h1>
-    <p>tools, techniques, and strategies for wildland search &amp; rescue</p>
+    <h1><a href="{{ site.url }}">{{ site.name }}</span></a></h1>
+    <p>{{ site.description }}</p>
 
     <nav>
       <ul>
@@ -29,10 +29,8 @@ layout: default
       </ul>
     </nav>
 
-    <footer>
-      <p class="social-media"><a href="https://github.com/emenendez/emenendez.github.io"><i class="fa fa-github"></i></a> <a href="https://twitter.com/ericrmenendez"><i class="fa fa-twitter"></i></a></p>
-      <p class="license">Licensed <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>.</p>
-    </footer>
+   {% include footer.html %}
+
   </div>
 </div>
 

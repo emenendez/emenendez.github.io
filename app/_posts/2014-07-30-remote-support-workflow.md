@@ -3,14 +3,12 @@ layout: paper
 title: A Workflow for Remote Support
 
 version: 0.1.0
+tagline: Bring all your resources to bear on every search, whether or not everyone responds; arrive on scene ready to hit the ground running; free your incident staff of time-consuming mindless tasks and let them focus on planning the search.
 ---
 
+<p class="intro">This document describes a workflow for incorporating remote support into a typical wildland search &amp; rescue incident in Virginia and, more broadly, anywhere in the ASRC response area. It is not meant to be a step-by-step guide to managing a missing person incident. In particular, at no point should any of the steps below take precedence over critical thought and attention to the specific details of an individual incident.</p>
 
-<p class="message">
-This document describes a workflow for incorporating remote support into a typical wildland search &amp; rescue incident in Virginia and, more broadly, anywhere in the ASRC response area. It is not meant to be a step-by-step guide to managing a missing person incident. In particular, at no point should any of the steps below take precedence over critical thought and attention to the specific details of an individual incident.
-</p>
-
-1. An incident begins with a request to VDEM for WSAR resources.
+1. An incident begins with a request to VDEM for WiSAR resources.
 
 1. The alert/duty officer gathers as much detail as possible about the incident, to include at a minimum:
    - The PLS/LKP street address, and coordinates if available
@@ -29,15 +27,12 @@ This document describes a workflow for incorporating remote support into a typic
    - Creates an incident folder on the SMRG Dropbox
    - Begins email chain to include all responding staff, remote support resources, and dispatchers (&#8220;incident email list&#8221;)
 
-1. The remote support team assembles relevant data and generates initial products. All remote support products are delivered via the Dropbox incident folder and incident email list.
-   - General-purpose maps of a variety of scales, using appropriate basemaps and other data, depicting planning point(s) and ICP (if known)
+1. > Goal: Deliver initial products before the first responder arrives on scene
 
-   <p class="message">
-     Goal: Deliver initial products before the first responder arrives on scene
-   </p>
-   <p class="message">
-     If reliable internet access is unavailable at the ICP, the second responder should stop just before leaving wireless coverage to download initial products.
-   </p>
+   > If reliable internet access is unavailable at the ICP, the second responder should stop just before leaving wireless coverage to download initial products.
+
+   The remote support team assembles relevant data and generates initial products. All remote support products are delivered via the Dropbox incident folder and incident email list.   
+   - General-purpose maps of a variety of scales, using appropriate basemaps and other data, depicting planning point(s) and ICP (if known)
 
 1. Responders arrive on scene, print general-purpose maps, and immediately begin hasty tasks.
    - Hasty tasks are dispatched using traditional TAFs and general-purpose maps, in order to deploy hasty teams with minimal delay.
@@ -46,29 +41,24 @@ This document describes a workflow for incorporating remote support into a typic
 1. When on-scene staff is available, details and initial search direction are discussed via conference call with the remote support team.
 
 1. Remote support team creates search segments and generates additional products:
+   
+   > These maps should be delivered to the incident as soon as they are available, before starting work on task packages.
+
+   > If search segments have been created on scene prior to initiating remote support, on-scene staff should send a segmented map to the remote team to ensure both teams work from the same segments.
+
+   > Goal: Deliver search segments and sufficient tasks for all resources on scene before all hasty tasks are completed
+
    - General-purpose maps overlaid with search segments
-     <p class="message">
-       These maps should be delivered to the incident as soon as they are available, before starting work on task packages.
-     </p>
    - Task packages
    - Task overview map
    - Additional specific analysis and/or products requested by on-scene staff or pertinent to the incident, for example:
        - cell phone analysis
        - historical weather analysis and/or near-future spot forecasts
        - terrain analysis
-   
-   <p class="message">
-     If search segments have been created on scene prior to initiating remote support, on-scene staff should send a segmented map to the remote team to ensure both teams work from the same segments.
-   </p>
 
-   <p class="message">
-     Goal: Deliver search segments and sufficient tasks for all resources on scene before all hasty tasks are completed
-   </p>
+1. > TAFs are printed on &#8220;one-sided TAFs&#8221; &#8212; carbonless copy paper with a blank front and preprinted with a traditional TAF back side.
 
-1. On-scene staff begin printing and prioritizing task packages.
-   <p class="message">
-     TAFs are printed on &#8220;one-sided TAFs&#8221; &#8212; carbonless copy paper with a blank front and preprinted with a traditional TAF back side.
-   </p>
+   On-scene staff begin printing and prioritizing task packages.
 
 1. Remote support team creates remaining task packages and updated task overview map.
 
@@ -81,10 +71,10 @@ This document describes a workflow for incorporating remote support into a typic
 - Join the SMRG Dropbox
 
 - Add the following to your personal and/or team ops kit:
+  
+  > SMRG has one-sided TAFs available to SAR personnel and teams at nominal cost
+
   - Blank one-sided TAFs (Personal: 25&#8211;50; Team: 125)
-    <p class="message">
-      SMRG has one-sided TAFs available to SAR personnel and teams at nominal cost
-    </p>
   - Blank letter paper (1 ream)
   - Laptop
   - Printer with spare ink/toner

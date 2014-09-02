@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ page.title }}</title>
+    <title>{% if page.title != null %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
 
     <!-- build:css({app,.tmp}) /css/main.css -->
     <!-- Custom CSS -->

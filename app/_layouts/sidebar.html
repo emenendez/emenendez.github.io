@@ -22,10 +22,6 @@ layout: default
 
       <h2>White papers</h2>
       <ul>
-        <li><a class="active" href="{{ node.url }}">A Workflow for Remote Support</a></li>
-        <li><a class="" href="{{ node.url }}">Searching Without Segments</a></li>
-        <li><a class="" href="{{ node.url }}">The Command Post of the Future</a></li>
-
         {% assign papers_list = site.pages %}
       	{% for node in papers_list %}
         	{% if node.title != null %}
@@ -34,13 +30,8 @@ layout: default
     	      {% endif %}
       	  {% endif %}
       	{% endfor %}
-
       </ul>
     </nav>
-
-
-
-
 
     <footer>
       <p class="social-media"><a href="https://github.com/emenendez/emenendez.github.io"><i class="fa fa-github"></i></a> <a href="https://twitter.com/ericrmenendez"><i class="fa fa-twitter"></i></a></p>

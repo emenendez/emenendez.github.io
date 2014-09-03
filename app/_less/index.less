@@ -97,8 +97,32 @@
     text-align: center;
 
     a {
-      .btn;
-      .btn-default;
+      display: inline-block;
+      white-space: nowrap;
+      background-color: @base2;
+      border: 1px solid transparent;
+      border-color: @base00;
+      border-radius: @border-radius-base;
+      padding: @padding-base-vertical @padding-base-horizontal;
+      .user-select(none);
+
+      &,
+      &:active {
+        &:focus {
+          .tab-focus();
+        }
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+
+      &:active {
+        outline: 0;
+        box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+      }
+
       &:after {
         content: " \BB";
       }

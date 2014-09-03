@@ -86,11 +86,19 @@ body {
   font-weight: 200;
 }
 
-h3 {
-  font-family: @font-family-serif;
-  font-size: 20px;
+.subheading() {
   margin: 3*@gutter-margin 0 @gutter-margin/2;
   font-weight: 600;
+}
+
+h2 {
+  .subheading;
+}
+
+h3 {
+  .subheading;
+  font-family: @font-family-serif;
+  font-size: 20px;
 }
 
 footer {

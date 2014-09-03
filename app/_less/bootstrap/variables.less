@@ -3,116 +3,23 @@
 // --------------------------------------------------
 
 
-//== Scaffolding
-//
-//## Settings for some of the most global styles.
-
-//** Background color for `<body>`.
-@body-bg:               #fff;
-
-
-//== Components
-//
-//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
-
-@padding-base-vertical:     6px;
-@padding-base-horizontal:   12px;
-@border-radius-base:        4px;
-
-
-//-- Z-index master list
-//
-// Warning: Avoid customizing these values. They're used for a bird's eye view
-// of components dependent on the z-axis and are designed to all work together.
-//
-// Note: These variables are not generated into the Customizer.
-
-@zindex-navbar:            1000;
-@zindex-dropdown:          1000;
-@zindex-popover:           1060;
-@zindex-tooltip:           1070;
-@zindex-navbar-fixed:      1030;
-@zindex-modal-background:  1040;
-@zindex-modal:             1050;
-
-
-//== Media queries breakpoints
-//
-//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
-
-// Extra small screen / phone
-//** Deprecated `@screen-xs` as of v3.0.1
-@screen-xs:                  480px;
-//** Deprecated `@screen-xs-min` as of v3.2.0
-@screen-xs-min:              @screen-xs;
-//** Deprecated `@screen-phone` as of v3.0.1
-@screen-phone:               @screen-xs-min;
-
-// Small screen / tablet
-//** Deprecated `@screen-sm` as of v3.0.1
-@screen-sm:                  768px;
-@screen-sm-min:              @screen-sm;
-//** Deprecated `@screen-tablet` as of v3.0.1
-@screen-tablet:              @screen-sm-min;
-
-// Medium screen / desktop
-//** Deprecated `@screen-md` as of v3.0.1
-@screen-md:                  992px;
-@screen-md-min:              @screen-md;
-//** Deprecated `@screen-desktop` as of v3.0.1
-@screen-desktop:             @screen-md-min;
-
-// Large screen / wide desktop
-//** Deprecated `@screen-lg` as of v3.0.1
-@screen-lg:                  1200px;
-@screen-lg-min:              @screen-lg;
-//** Deprecated `@screen-lg-desktop` as of v3.0.1
-@screen-lg-desktop:          @screen-lg-min;
-
-// So media queries don't overlap when required, provide a maximum
-@screen-xs-max:              (@screen-sm-min - 1);
-@screen-sm-max:              (@screen-md-min - 1);
-@screen-md-max:              (@screen-lg-min - 1);
-
-
-
-
-//== Jumbotron
-//
-//##
-
-@jumbotron-padding:              30px;
-@jumbotron-color:                inherit;
-@jumbotron-bg:                   @base2;
-@jumbotron-heading-color:        inherit;
-@jumbotron-font-size:            ceil((@font-size-base * 1.5));
-
-
-
-
 //== Type
 //
 //##
 
-//** Horizontal offset for forms and lists.
-@component-offset-horizontal: 180px;
-//** Text muted color
-@text-muted:                  @base1;
-//** Abbreviations and acronyms border color
-@abbr-border-color:           @base1;
 //** Headings small color
-@headings-small-color:        @base1;
+// @headings-small-color:        @base1;
 //** Blockquote small color
-@blockquote-small-color:      @base1;
+// @blockquote-small-color:      @base1;
 //** Blockquote font size
-@blockquote-font-size:        (@font-size-base * 1.25);
+// @blockquote-font-size:        (@font-size-base * 1.25);
 //** Blockquote border color
-@blockquote-border-color:     @base2;
+// @blockquote-border-color:     @base2;
 //** Page header border color
-@page-header-border-color:    @base2;
+// @page-header-border-color:    @base2;
 //** Width of horizontal description list titles
-@dl-horizontal-offset:        @component-offset-horizontal;
+// @dl-horizontal-offset:        @component-offset-horizontal;
 //** Horizontal line color.
-@hr-border:                   @base2;
+// @hr-border:                   @base2;
 
 

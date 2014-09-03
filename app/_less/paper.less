@@ -4,7 +4,17 @@
 // Mixins
 .blockquote() {
   font-family: @font-family-sans-serif;
+  margin: 0;
   padding: 0;
+
+  p:last-child {
+   margin-bottom: 0;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+  }
 }
 
 /* Sidebar */
@@ -84,6 +94,9 @@
 
   li > blockquote {
     .blockquote;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
     font-size: @font-size-base;
     padding: floor(@line-height-computed / 4);
     margin-bottom: floor(@line-height-computed / 2);

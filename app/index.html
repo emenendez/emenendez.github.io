@@ -28,7 +28,7 @@ layout: default
   {% for node in papers_list %}
     {% if node.title != null %}
       <div class="paper">
-        <i class="fa {{ node.icon }}"></i>
+        <a href="{{ node.url }}"><i class="fa {{ node.icon }}"></i></a>
         <h2>{{ node.title }}</h2>
         <p>{{ node.tagline }}</p>
         <p class="action"><a href="{{ node.url }}" role="button">{{ node.action }}</a></p>

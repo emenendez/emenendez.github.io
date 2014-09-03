@@ -33,7 +33,7 @@ markdown: kramdown
 pygments: true
 
 # Permalinks
-permalink:        /:title/index.html
+permalink:        /:title/
 
 # Custom vars
 github:

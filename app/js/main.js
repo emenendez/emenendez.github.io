@@ -21,6 +21,7 @@
 })();
 
 $( document ).ready(function() {
+  // Set up Hammer.js
   delete Hammer.defaults.cssProps.userSelect;
   var target = $('.sidebar');
 
@@ -35,5 +36,20 @@ $( document ).ready(function() {
       target.removeClass('visible');
     }
   });
+
+  // Remove repeat <abbr>s
+  var abbrs = new Array();
+
+  function removeAbbr() {
+    if ($.inArray($(this).text(), abbrs) >= 0) {
+      $(this).replaceWith($(this).text());
+    }
+    else {
+      abbrs.push($(this).text());
+    }
+  }
+
+  $('abbr').not('blockquote abbr').each(removeAbbr);
+  $('blockquote abbr').each(removeAbbr);
 
 });

@@ -104,3 +104,16 @@ action:  Read more
 -   Use care when choosing the segment boundary color and pattern. It should be discernible even when the task maps are printed in grayscale.
 
 -   1:12,000-scale task maps are often much clearer than 1:24,000-scale maps. However, it can be difficult for the field team to locate their task area relative to the ICP. When necessary, create an additional transportation map appropriate for field teams to use for travel to their tasks.
+
+*[ASRC]:  Appalachian Search &amp; Rescue Conference (www.asrc.net)
+*[EOC]:   emergency operations center
+*[ICP]:   incident command post
+*[LKP]:   last known position
+*[PLS]:   point last seen
+*[RA]:    responsible authority
+*[SAR]:   search and rescue
+*[SMRG]:  Shenandoah Mountain Rescue Group (www.smrg.org)
+*[TAF]:   task assignment form
+*[TAFs]:  task assignment forms
+*[VDEM]:  Virginia Department of Emergency Management
+*[WiSAR]: wildland search and rescue

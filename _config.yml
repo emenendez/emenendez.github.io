@@ -30,7 +30,7 @@ show_drafts: true
 markdown: kramdown
 #   extensions: ['fenced_code_blocks', 'smart']
 
-pygments: true
+highlighter: pygments
 
 # Sass
 sass:

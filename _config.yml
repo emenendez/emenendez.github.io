@@ -3,15 +3,21 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: emenendez.github.io
+url:  http://emenendez.github.io
+name: emenendez<span class="github">.github.io
 description: Tools, techniques, and strategies for wildland search & rescue.
 author:
   name: Eric Menendez
   email: ericmenendez@gmail.com
   url: https://github.com/emenendez
+  twitter: https://twitter.com/ericrmenendez
+
+license:
+  name: CC-BY-SA 4.0
+  url:  http://creativecommons.org/licenses/by-sa/4.0/
 
 # Grunt handles images and assets.
-exclude: ['img', 'css', 'js', 'fonts',
+exclude: ['img', 'js', 'fonts',
           '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
 
 include: ['.htaccess']
@@ -21,13 +27,17 @@ future: true
 show_drafts: true
 
 # Markdown library
-markdown: redcarpet
+markdown: kramdown
 #   extensions: ['fenced_code_blocks', 'smart']
 
-pygments: true
+highlighter: pygments
+
+# Sass
+sass:
+  style: :compressed
 
 # Permalinks
-permalink:        pretty
+permalink:        /:title/
 
 # Custom vars
 github:

@@ -1,0 +1,25 @@
+---
+layout: sidebar
+---
+
+<div class="copy">
+  <h1>{{ page.title }}</h1>
+	<p class="version">Version {{ page.version }}</p>
+  {{ content }}
+
+  <h2>Comments?</h2>
+  <p><a href="{{ site.github.repo }}/issues/new">Open an issue</a> or <a href="{{ site.github.repo }}/compare">send a pull request</a> on GitHub.</p>
+</div>
+
+<footer>
+  <p class="text-center"><a href="#">Back to top</a></p>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- build:js(app) /js/scripts.js -->
+<script src="/js/hammer.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- endbuild -->

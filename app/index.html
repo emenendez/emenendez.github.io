@@ -1,86 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+---
+layout: default
+---
 
-    <title>{{ page.title }}</title>
+<!-- Carousel
+================================================== -->
+<div class="banner">
+	<h1>{{ site.name }}</span></h1>
+  <p>{{ site.description }}</p>
+  <nav>
+    <ul>
+      <li class="{% if page.url == site.url %}active{% endif %}"><a href="{{ site.url }}">Home</a></li>
+      {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          <li><a class="{% if page.url == node.url %}active{% endif %}" href="{{ node.url }}">{{ node.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+</div><!-- /.banner -->
 
-    <!-- build:css({app,.tmp}) /css/main.css -->
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/main.css">
-    <!-- endbuild -->
+<!-- Links to whitepapers
+================================================== -->
+<div class="papers">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+  {% assign papers_list = site.posts | sort: 'date' %}
+  {% for node in papers_list %}
+    {% if node.title != null %}
+      <div class="paper">
+        <a href="{{ node.url }}"><i class="fa {{ node.icon }}"></i></a>
+        <h2>{{ node.title }}</h2>
+        <p>{{ node.tagline }}</p>
+        <p class="action"><a href="{{ node.url }}" role="button">{{ node.action }}</a></p>
+      </div><!-- /.paper -->
+    {% endif %}
+  {% endfor %}
 
-    <!-- Carousel
-    ================================================== -->
-    <div class="jumbotron">
-    	<div class="container">
-	    	<h1>emenendez.github.io</h1>
-        <p>tools, techniques, and strategies for wildland search &amp; rescue</p>
-        <ul class="nav" role="navigation">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+ {% include footer.html %}
 
-    </div><!-- /.jumbotron -->
-
-
-
-    <!-- Links to whitepapers
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container papers">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-md-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2>A Workflow for Remote Support</h2>
-          <p>Bring all your resources to bear on every search, whether or not everyone responds; arrive on scene ready to hit the ground running; free your incident staff of time-consuming mindless tasks and let them focus on planning the search.</p>
-          <p><a class="btn btn-default" href="#" role="button">Read more</a></p>
-        </div><!-- /.col-md-4 -->
-        <div class="col-md-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2>Searching Without Segments</h2>
-          <p>Search segments are time-consuming to create and not often searched completely. Get your resources in the field faster, and track search progress better, by ditching the segment for good.</p>
-          <p><a class="btn btn-default" href="#" role="button">Find out how</a></p>
-        </div><!-- /.col-md-4 -->
-        <div class="col-md-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2>The Command Post of the Future</h2>
-          <p>Goodbye crumpled paper, messy handwriting, and lost information. Hello user-friendly maps, everywhere in the ICP.</p>
-          <p><a class="btn btn-default" href="#" role="button">Step inside</a></p>
-        </div><!-- /.col-md-4 -->
-      </div><!-- /.row -->
-
-      <!-- FOOTER -->
-      <footer>
-        <p class="pull-right">GitHub Twitter</p>
-        <p>Licensed <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>.</p>
-      </footer>
-
-    </div><!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- build:js(app) /js/scripts.js -->
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/main.js"></script>
-    <!-- endbuild -->
-  </body>
-</html>
+</div><!-- /.papers -->

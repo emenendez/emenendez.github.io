@@ -90,6 +90,22 @@ footer {
   font-size: $social-media-icons;
 }
 
+// Print styles
+@media print {
+  footer p {
+    line-height: ceil($line-height-base * $font-size-small);
+  }
+
+  .social-media {
+    float: none;
+    font-size: $font-size-small;
+
+    a {
+      display: block;
+    }
+  }
+}
+
 // Index page
 @import "index.scss";
 

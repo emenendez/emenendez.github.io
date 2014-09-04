@@ -137,3 +137,10 @@
     margin-left: 2*$gutter-margin;
   }
 }
+
+// Print styles
+@media print {
+  .paper a:after {
+    content: "";
+  }
+}

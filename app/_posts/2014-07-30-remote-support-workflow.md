@@ -8,7 +8,7 @@ tagline: Bring all your resources to bear on every search, whether or not everyo
 action:  Read more
 ---
 
-<p class="intro">This document describes a workflow for incorporating remote support into a typical wildland search &amp; rescue incident in Virginia and, more broadly, anywhere in the ASRC response area. It is not meant to be a step-by-step guide to managing a missing person incident. In particular, at no point should any of the steps below take precedence over critical thought and attention to the specific details of an individual incident.</p>
+<p class="intro">This document describes a workflow for incorporating remote support into a typical wildland search and rescue incident in Virginia and, more broadly, anywhere in the ASRC response area. It is not meant to be a step-by-step guide to managing a missing person incident. In particular, at no point should any of the steps below take precedence over critical thought and attention to the specific details of an individual incident.</p>
 
 1.  An incident begins with a request to VDEM for WiSAR resources.
 

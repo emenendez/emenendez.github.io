@@ -17,7 +17,7 @@ license:
   url:  http://creativecommons.org/licenses/by-sa/4.0/
 
 # Grunt handles images and assets.
-exclude: ['img', 'css', 'js', 'fonts',
+exclude: ['img', 'js', 'fonts',
           '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
 
 include: ['.htaccess']
@@ -31,6 +31,10 @@ markdown: kramdown
 #   extensions: ['fenced_code_blocks', 'smart']
 
 pygments: true
+
+# Sass
+sass:
+  style: :compressed
 
 # Permalinks
 permalink:        /:title/

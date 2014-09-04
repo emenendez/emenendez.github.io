@@ -1,0 +1,96 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* FONTS
+-------------------------------------------------- */
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700|Source+Serif+Pro:400,600");
+
+@import "colors.scss";
+@import "bootstrap/bootstrap.scss";
+
+@import "variables.scss";
+
+/* MIXINS
+-------------------------------------------------- */
+@mixin header {
+  // background: url('../img/cartographer.png');
+  background: $base03;
+  color: $base0;
+  font-family: $font-family-headings;
+
+  a {
+    color: $sidebar-link-color;
+
+    &:hover {
+      color: $sidebar-link-hover-color;
+    }
+  }
+}
+
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer */
+
+body {
+  padding-bottom: $font-size-base;
+  background: $base3;
+}
+
+.github {
+  font-weight: 200;
+}
+
+@mixin subheading {
+  margin: 3*$gutter-margin 0 $gutter-margin/2;
+  font-weight: 600;
+}
+
+h2 {
+  @include subheading;
+}
+
+h3 {
+  @include subheading;
+  font-family: $font-family-serif;
+  font-size: 20px;
+}
+
+footer {
+  font-size: $font-size-small;
+  font-family: $font-family-serif;
+  text-align: left;
+
+  p {
+    margin: 0;
+    line-height: $social-media-icons;
+  }
+
+  a {
+    border-bottom: $footer-link-underline solid transparent;
+
+    &:hover {
+      text-decoration: none;
+      border-bottom-color: $link-hover-color;
+
+      .sidebar & {
+        border-bottom-color: $sidebar-link-hover-color;
+      }
+    }
+  }
+}
+
+.social-media {
+  float: right;
+  font-size: $social-media-icons;
+}
+
+// Index page
+@import "index.scss";
+
+// WHitepapers
+@import "paper.scss";
+

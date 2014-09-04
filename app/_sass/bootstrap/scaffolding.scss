@@ -9,11 +9,11 @@
 // For recommendations on resolving such conflicts, see
 // http://getbootstrap.com/getting-started/#third-box-sizing
 * {
-  .box-sizing(border-box);
+  @include box-sizing(border-box);
 }
 *:before,
 *:after {
-  .box-sizing(border-box);
+  @include box-sizing(border-box);
 }
 
 
@@ -25,10 +25,10 @@ html {
 }
 
 body {
-  font-family: @font-family-base;
-  font-size: @font-size-base;
-  line-height: @line-height-base;
-  color: @text-color;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
 }
 
 // Reset fonts for relevant elements
@@ -45,17 +45,17 @@ textarea {
 // Links
 
 a {
-  color: @link-color;
+  color: $link-color;
   text-decoration: none;
 
   &:hover,
   &:focus {
-    color: @link-hover-color;
+    color: $link-hover-color;
     text-decoration: underline;
   }
 
   &:focus {
-    .tab-focus();
+    @include tab-focus;
   }
 }
 

@@ -1,27 +1,24 @@
-/* CUSTOMIZE THE JUMBOTRON
--------------------------------------------------- */
-
 /* Carousel base class */
 .banner {
-  .header;
+  @include header;
 
-  padding: @banner-padding;
-  margin-bottom: @banner-padding;
+  padding: $banner-padding;
+  margin-bottom: $banner-padding;
   text-align: center;
 
   p {
-    margin-bottom: (@banner-padding / 2);
-    font-family: @font-family-serif;
-    font-size: ceil((@font-size-base * 1.5));
+    margin-bottom: ($banner-padding / 2);
+    font-family: $font-family-serif;
+    font-size: ceil(($font-size-base * 1.5));
     font-weight: 400;
   }
 
-  @media screen and (min-width: @screen-md-min) {
-    padding-top:    (@banner-padding * 1.6);
-    padding-bottom: (@banner-padding * 1.6);
+  @media screen and (min-width: $screen-md-min) {
+    padding-top:    ($banner-padding * 1.6);
+    padding-bottom: ($banner-padding * 1.6);
 
     h1 {
-      font-size: (@font-size-base * 4.5);
+      font-size: ($font-size-base * 4.5);
     }
   }
 
@@ -39,8 +36,8 @@
         padding-right: 0;
         padding-left: 0;
         padding-bottom: 0;
-        border-bottom: @header-link-underline solid transparent;
-        font-size: @font-size-large;
+        border-bottom: $header-link-underline solid transparent;
+        font-size: $font-size-large;
 
         &:hover,
         &:focus {
@@ -53,7 +50,7 @@
     }
 
     li + li {
-      margin-left: @line-height-computed;
+      margin-left: $line-height-computed;
     }
   }
 
@@ -66,22 +63,22 @@
 /* Center align the text within the three columns below the carousel */
 .papers {
   width: 100%;
-  padding: 0 2*@gutter-margin;
+  padding: 0 2*$gutter-margin;
   text-align: center;
 }
 
 .paper {
   display: inline-block;
-  max-width: @paper-width;
-  margin-bottom: @line-height-computed;
+  max-width: $paper-width;
+  margin-bottom: $line-height-computed;
   vertical-align: top;
 
   i {
-    font-size: @paper-icon-size;
+    font-size: $paper-icon-size;
   }
 
   a i {
-    color: @text-color;
+    color: $text-color;
   }
 
   h2 {
@@ -99,17 +96,17 @@
     a {
       display: inline-block;
       white-space: nowrap;
-      background-color: @base2;
+      background-color: $base2;
       border: 1px solid transparent;
-      border-color: @base00;
-      border-radius: @border-radius-base;
-      padding: @padding-base-vertical @padding-base-horizontal;
-      .user-select(none);
+      border-color: $base00;
+      border-radius: $border-radius-base;
+      padding: $padding-base-vertical $padding-base-horizontal;
+      @include user-select(none);
 
       &,
       &:active {
         &:focus {
-          .tab-focus();
+          @include tab-focus();
         }
       }
 
@@ -131,12 +128,12 @@
 }
 
 // Medium screens
-@media (min-width: @screen-md-min) {
+@media (min-width: $screen-md-min) {
   .paper {
-    width: @paper-width;
+    width: $paper-width;
   }
 
   .paper + .paper {
-    margin-left: 2*@gutter-margin;
+    margin-left: 2*$gutter-margin;
   }
 }

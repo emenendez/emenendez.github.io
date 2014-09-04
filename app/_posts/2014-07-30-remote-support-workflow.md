@@ -29,9 +29,9 @@ action:  Read more
 
     - Informs on-scene staff remote support is available
     - Creates an incident folder on the SMRG Dropbox
-    - Begins email chain to include all responding staff, remote support resources, and dispatchers (&#8220;incident email list&#8221;)
+    - Begins an email chain to include all responding staff, remote support resources, and dispatchers (&#8220;incident email list&#8221;)
 
-1.  > Goal: Deliver initial products before the first responder arrives on scene
+1.  > Goal: Deliver initial products before the first SAR responder arrives on scene
 
     > If reliable internet access is unavailable at the ICP, the second responder should stop just before leaving wireless coverage to download initial products.
 
@@ -62,7 +62,7 @@ action:  Read more
       - historical weather analysis and/or near-future spot forecasts
       - terrain analysis
 
-1.  > TAFs are printed on &#8220;one-sided TAFs&#8221; &#8212; carbonless copy paper with a blank front and preprinted with a traditional TAF back side.
+1.  > TAFs are printed on &#8220;one-sided TAFs&#8221; --- carbonless copy paper with a blank front and preprinted with a traditional TAF back side.
 
     On-scene staff begin printing and prioritizing task packages.
 
@@ -80,7 +80,7 @@ action:  Read more
   
     > SMRG has one-sided TAFs available to SAR personnel and teams at nominal cost
 
-    - Blank one-sided TAFs (Personal: 25&#8211;50; Team: 125)
+    - Blank one-sided TAFs (Personal: 25--50; Team: 125)
     - Blank letter paper (1 ream)
     - Laptop
     - Printer with spare ink/toner
@@ -88,9 +88,9 @@ action:  Read more
 
 ### Notes for remote support teams
 
--   Take care to obtain accurate planning point(s) from street addresses. National or global geocoding services such as those provided by Google, Terrain Navigator, or Esri are often quite inaccurate, particularly in rural areas. Many counties run GIS websites which provide property records and very accurate geocoding; use these instead. If the EOC or RA provides coordinates, inquire where the coordinates came from and check them against a street address.
+-   Take care to obtain accurate planning point(s) from street addresses. National or global geocoding services such as those provided by Google, Terrain Navigator, or Esri are often quite inaccurate, particularly in rural areas. Many counties have GIS websites which provide property records and very accurate geocoding; use these instead. If the EOC or RA provides coordinates, inquire where the coordinates came from and check them against a street address.
 
--   To coordinate between multiple team members when segmenting the search area, create regions and assign them to specific individuals to divide into segments; assign a block of 100 planning numbers to each, e.g. 1xx, 2xx, etc. Save planning numbers less than 100 for the on-scene staff.
+-   To coordinate between multiple team members when segmenting the search area, create regions and assign them to specific individuals to divide into segments; assign a block of one hundred planning numbers to each, e.g. 100--199, 200--299, etc. Save planning numbers less than 100 for the on-scene staff.
 
 -   After dividing a region into segments, export them to a shapefile and share it via Dropbox so the whole team can see all the segments.
 

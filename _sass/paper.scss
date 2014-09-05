@@ -41,8 +41,15 @@
     background-size: auto 110%;
   }
 
-  &:hover, &.visible {
+  &.visible {
     @include sidebar-visible;
+  }
+
+  // Medium screens
+  @media (min-width: $screen-md-min) {
+    &:hover {
+      @include sidebar-visible;
+    }
   }
   
   // Large screens

@@ -37,6 +37,11 @@ $( document ).ready(function() {
     }
   });
 
+  // Toggle visibility on sidebar touch
+  target.on('click', function() {
+    $(this).toggleClass('visible');
+  });
+
   // Remove repeat <abbr>s
   var abbrs = new Array();
 

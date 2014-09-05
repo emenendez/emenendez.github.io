@@ -2,6 +2,13 @@
 .banner {
   @include header;
 
+  background-image: url('/img/contours-narrow.svg');
+  background-position: center;
+  // Scale background if needed
+  @media (min-width: 2500px) {
+    background-size: 110%;
+  }
+
   padding: $banner-padding;
   margin-bottom: $banner-padding;
   text-align: center;

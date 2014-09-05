@@ -1,0 +1,237 @@
+/* WHITE PAPERS
+-------------------------------------------------- */
+
+// Mixins
+@mixin blockquote {
+  font-family: $font-family-sans-serif;
+  margin: 0;
+  padding: 0;
+
+  p:last-child {
+   margin-bottom: 0;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+  }
+}
+
+/* Sidebar */
+
+@mixin sidebar-visible {
+  left: 0;
+}
+
+.sidebar {
+  @include header;
+
+  // Small and medium screens
+  position: fixed;
+  top: 0;
+  left: 2*$gutter-margin - $sidebar-width;
+  bottom: 0;
+  width: $sidebar-width;
+  transition-duration: $transitions;
+
+  background-image: url('/img/contours-tall.svg');
+  background-position: center;
+  // Scale background if needed
+  @media (min-height: 1600px) {
+    background-size: auto 110%;
+  }
+
+  &:hover, &.visible {
+    @include sidebar-visible;
+  }
+  
+  // Large screens
+  @media (min-width: $screen-lg-min) {
+    @include sidebar-visible;
+    transition-duration: 0;
+  }
+
+  font-size: $font-size-medium;
+  
+  p {
+    font-family: $font-family-serif;
+  }
+
+  nav {
+    h2 {
+      font-family: $font-family-serif;
+      font-size: $font-size-medium;
+      font-weight: 400;
+      margin: $gutter-margin 0 $gutter-margin/2;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      a.active {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.sidebar-sticky {
+  position: absolute;
+  right:  2*$gutter-margin;
+  bottom: $font-size-small;
+  left:   $font-size-small;
+}
+
+/* Content */
+.copy {
+  // Small screens
+  font-size: $font-size-medium;
+  line-height: $line-height-content;
+  max-width: $content-width + 4*$gutter-margin;
+  margin: auto;
+  padding: 0 $gutter-margin 0 3*$gutter-margin;
+
+  // Title iamge
+  & > p:first-child {
+    margin-top: 2*$gutter-margin;
+  }
+
+  li > blockquote {
+    @include blockquote;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    font-size: $font-size-base;
+    padding: floor($line-height-computed / 4);
+    margin-bottom: floor($line-height-computed / 2);
+
+    background-color: $base2;
+    color: $base01;
+  }
+
+  // Medium screens
+  @media (min-width: $screen-md-min) {
+    max-width: none;
+    width: $content-width + $gutter-margin + $gutter-width;
+    padding: 0;
+    transition-duration: $transitions;
+
+    & > * {
+      width: $content-width;
+    }
+
+    & > ol,
+    & > ul {
+      width: $content-width + $gutter-margin + $gutter-width;
+
+      & > li > * {
+        width: $content-width - $list-padding;
+      }
+    }
+
+    li > blockquote {
+      float: right;
+      clear: both;
+      width: $gutter-width;
+      padding: 0;
+      padding-left: floor($line-height-computed / 4);
+      border-left: $quote-border;
+      background-color: transparent;
+      color: $text-color;
+    }
+  }
+
+  // Large screens
+  @media (min-width: $screen-lg-min) {
+    width: $gutter-width + $gutter-margin + $content-width + $gutter-margin + $gutter-width;
+    padding-left: $gutter-width + $gutter-margin;
+    transition-duration: 0;
+  }
+}
+
+.version {
+  font-family: $font-family-sans-serif;
+  margin-top: (-$line-height-computed / 2);
+}
+
+.intro {
+  @include blockquote;
+  font-size: $font-size-medium;
+  padding: floor($line-height-computed / 2);
+  margin-bottom: $line-height-computed;
+  border-top: $quote-border;
+  border-bottom: $quote-border;
+}
+
+ol, ul {
+  padding-left: $list-padding;
+
+  ol, ul {
+    margin-bottom: floor($line-height-computed / 2);
+  }
+}
+
+.top {
+  text-align: center;
+}
+
+@media print {
+  .sidebar {
+    position: static;
+    width: auto;
+    max-width: 5in;
+    margin: $gutter-margin auto;
+    text-align: center;
+
+    h1 a:after {
+      content: "";
+    }
+
+    h2, nav, ul {
+      display: none;
+    }
+  }
+
+  .sidebar-sticky {
+    position: static;
+  }
+
+  .copy {
+    max-width: none;
+    width: $content-width-print + $gutter-margin-print + $gutter-width-print;
+    padding: 0;
+
+    & > * {
+      width: $content-width-print;
+    }
+
+    & > ol,
+    & > ul {
+      width: $content-width-print + $gutter-margin-print + $gutter-width-print;
+
+      & > li > * {
+        width: $content-width-print - $list-padding;
+      }
+    }
+
+    li > blockquote {
+      float: right;
+      clear: both;
+      width: $gutter-width-print;
+      padding: 0;
+      padding-left: floor($line-height-computed / 4);
+      border: 0;
+      border-left: $quote-border;
+      background-color: transparent;
+      color: $text-color;
+    }
+  }
+
+  .top {
+    display: none;
+  }
+
+}

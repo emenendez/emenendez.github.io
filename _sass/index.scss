@@ -1,0 +1,153 @@
+/* Carousel base class */
+.banner {
+  @include header;
+
+  background-image: url('/img/contours-narrow.svg');
+  background-position: center;
+  // Scale background if needed
+  @media (min-width: 2500px) {
+    background-size: 110%;
+  }
+
+  padding: $banner-padding;
+  margin-bottom: $banner-padding;
+  text-align: center;
+
+  p {
+    margin-bottom: ($banner-padding / 2);
+    font-family: $font-family-serif;
+    font-size: ceil(($font-size-base * 1.5));
+    font-weight: 400;
+  }
+
+  @media screen and (min-width: $screen-md-min) {
+    padding-top:    ($banner-padding * 1.6);
+    padding-bottom: ($banner-padding * 1.6);
+
+    h1 {
+      font-size: ($font-size-base * 4.5);
+    }
+  }
+
+  /* Nav links */
+
+  nav {
+    ul {
+      padding: 0;
+    }
+    
+    li {
+      display: inline-block;
+
+      & > a {
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0;
+        border-bottom: $header-link-underline solid transparent;
+        font-size: $font-size-large;
+
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          border-bottom-color: #a9a9a9;
+          border-bottom-color: rgba(255,255,255,.25);
+          text-decoration: none;
+        }
+      }
+    }
+
+    li + li {
+      margin-left: $line-height-computed;
+    }
+  }
+
+}
+
+
+/* WHITEPAPER PANELS
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.papers {
+  width: 100%;
+  padding: 0 2*$gutter-margin;
+  text-align: center;
+}
+
+.paper {
+  display: inline-block;
+  max-width: $paper-width;
+  margin-bottom: $line-height-computed;
+  vertical-align: top;
+
+  i {
+    font-size: $paper-icon-size;
+  }
+
+  a i {
+    color: $text-color;
+  }
+
+  h2 {
+    font-weight: normal;
+    text-align: center;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  .action {
+    text-align: center;
+
+    a {
+      display: inline-block;
+      white-space: nowrap;
+      background-color: $base2;
+      border: 1px solid transparent;
+      border-color: $base00;
+      border-radius: $border-radius-base;
+      padding: $padding-base-vertical $padding-base-horizontal;
+      @include user-select(none);
+
+      &,
+      &:active {
+        &:focus {
+          @include tab-focus();
+        }
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+
+      &:active {
+        outline: 0;
+        box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+      }
+
+      &:after {
+        content: " \BB";
+      }
+    }
+  }
+}
+
+// Medium screens
+@media (min-width: $screen-md-min) {
+  .paper {
+    width: $paper-width;
+  }
+
+  .paper + .paper {
+    margin-left: 2*$gutter-margin;
+  }
+}
+
+// Print styles
+@media print {
+  .paper a:after {
+    content: "";
+  }
+}

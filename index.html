@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<!-- Carousel
+================================================== -->
+<div class="banner">
+	<h1>{{ site.name }}</span></h1>
+  <p>{{ site.description }}</p>
+  <nav>
+    <ul>
+      <li class="{% if page.url == site.url %}active{% endif %}"><a href="{{ site.url }}">Home</a></li>
+      {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          <li><a class="{% if page.url == node.url %}active{% endif %}" href="{{ node.url }}">{{ node.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+</div><!-- /.banner -->
+
+<!-- Links to whitepapers
+================================================== -->
+<div class="papers">
+
+  {% assign papers_list = site.posts | sort: 'date' %}
+  {% for node in papers_list %}
+    {% if node.title != null %}
+      <div class="paper">
+        <a href="{{ node.url }}"><i class="fa {{ node.icon }}"></i></a>
+        <h2>{{ node.title }}</h2>
+        <p>{{ node.tagline }}</p>
+        <p class="action"><a href="{{ node.url }}" role="button">{{ node.action }}</a></p>
+      </div><!-- /.paper -->
+    {% endif %}
+  {% endfor %}
+
+ {% include footer.html %}
+
+</div><!-- /.papers -->

@@ -44,7 +44,12 @@ $( document ).ready(function() {
 
   // Toggle visibility on sidebar touch
   target.on('click', function() {
-    $(this).toggleClass('visible');
+    target.toggleClass('visible');
+  });
+
+  // Hide sidebar on copy touch
+  $('.copy').on('click', function() {
+    target.removeClass('visible');
   });
 
   // Remove repeat <abbr>s

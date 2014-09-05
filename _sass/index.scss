@@ -9,7 +9,7 @@
     background-size: 110%;
   }
 
-  padding: $banner-padding;
+  padding: $banner-padding $gutter-margin;
   margin-bottom: $banner-padding;
   text-align: center;
 
@@ -21,8 +21,7 @@
   }
 
   @media screen and (min-width: $screen-md-min) {
-    padding-top:    ($banner-padding * 1.6);
-    padding-bottom: ($banner-padding * 1.6);
+    padding: ($banner-padding * 1.6) $banner-padding;
 
     h1 {
       font-size: ($font-size-base * 4.5);

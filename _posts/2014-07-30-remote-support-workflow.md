@@ -2,7 +2,7 @@
 layout: paper
 title: A Workflow for Remote Support
 
-version: 0.1.0
+version: 1.0.0
 icon:    fa-group
 tagline: Bring all your resources to bear on every search, whether or not everyone responds; arrive on scene ready to hit the ground running; free your incident staff of time-consuming mindless tasks and let them focus on planning the search.
 action:  Read more

@@ -17,7 +17,7 @@ license:
   url:  http://creativecommons.org/licenses/by-sa/4.0/
 
 # Grunt handles images and assets.
-exclude: ['img', 'js', 'fonts',
+exclude: ['img', 'fonts',
           '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
 
 include: ['.htaccess']

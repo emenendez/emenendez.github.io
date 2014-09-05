@@ -1,3 +1,8 @@
+---
+---
+
+{% include hammer.min.js %}
+
 /*!
  * IE10 viewport hack for Surface/desktop Windows 8 bug
  * Copyright 2014 Twitter, Inc.

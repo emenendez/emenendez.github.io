@@ -63,12 +63,12 @@ module.exports = function (grunt) {
     jekyll: {
       options: {
         bundleExec: true,
-        config: '_config.yml,_config.build.yml',
+        config: '_config.yml,_config.dev.yml',
         src: '.'
       },
       server: {
         options: {
-          config: '_config.yml',
+          config: '_config.yml,_config.dev.yml',
           dest: '.jekyll'
         }
       },

@@ -17,6 +17,14 @@
   }
 }
 
+@mixin blockquote-medium {
+  padding: 0;
+  padding-left: floor($line-height-computed / 4);
+  border-left: $quote-border;
+  background-color: transparent;
+  color: $text-color;
+}
+
 /* Sidebar */
 
 @mixin sidebar-visible {
@@ -101,12 +109,13 @@
   margin: auto;
   padding: 0 $gutter-margin 0 3*$gutter-margin;
 
-  // Title iamge
+  // Title image
   & > p:first-child {
     margin-top: 2*$gutter-margin;
   }
 
-  li > blockquote {
+  li > blockquote,
+  & > blockquote {
     @include blockquote;
     display: inline-block;
     width: 100%;
@@ -140,14 +149,16 @@
     }
 
     li > blockquote {
+      @include blockquote-medium;
       float: right;
       clear: both;
       width: $gutter-width;
-      padding: 0;
-      padding-left: floor($line-height-computed / 4);
-      border-left: $quote-border;
-      background-color: transparent;
-      color: $text-color;
+    }
+
+    & > blockquote {
+      @include blockquote-medium;
+      width: $content-width;
+      font-size: $font-size-medium;
     }
   }
 
@@ -234,6 +245,10 @@ ol, ul {
       border-left: $quote-border;
       background-color: transparent;
       color: $text-color;
+    }
+
+    & > blockquote {
+      width: $content-width-print;
     }
   }
 

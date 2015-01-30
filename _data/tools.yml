@@ -1,0 +1,15 @@
+- name: gpxutils
+  github: emenendez/gpxutils
+  description: Quickly download and clean GPX tracks.
+
+- name: GPSmapper
+  github: emenendez/GPSmapper
+  description: Automatically show GPS tracks from Dropbox on a web map.
+
+- name: Integrated Geospatial Tools for Search and Rescue
+  github: emenendez/MapSAR_Ex
+  description: Full-featured ArcGIS map template and tools for WiSAR incidents.
+
+- name: Cell GPS
+  github: emenendez/cell-gps
+  description: Easily request location from a cellular device with user permission.

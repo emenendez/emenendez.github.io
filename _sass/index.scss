@@ -92,6 +92,16 @@
     text-align: center;
   }
 
+  h3 {
+    margin: ceil($line-height-computed/2) 0 ceil($line-height-computed/10);
+    font-size: $font-size-medium;
+    font-weight: 400;
+    text-align: left;
+    i {
+      font-size: $font-size-medium;
+    }
+  }
+
   p {
     text-align: left;
   }

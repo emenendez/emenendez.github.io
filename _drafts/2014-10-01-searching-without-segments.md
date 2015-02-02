@@ -6,6 +6,10 @@ version: 0.1.0
 icon:    fa-dot-circle-o
 tagline: Search segments are time-consuming to create and not often searched completely. Get your resources in the field faster, and track search progress better, by ditching the segment for good.
 action:  Find out how
+acknowledgments: 
+  - Josh Toms
+  - Rebecca Unruh
+  - Steve Weiss
 ---
 
 <p class="intro">{{ page.tagline }}</p>
@@ -56,7 +60,7 @@ Lacking an accurate method for estimating or calculating POD, this paper propose
 
 ### A better way to direct searchers
 
-Now, since we are longer tracking search progress segment by segment, we are free to direct our field teams in whatever way is most efficient and appropriate for the circumstances of each particular incident. 
+Now, since we are no longer tracking search progress segment by segment, we are free to direct our field teams in whatever way is most efficient and appropriate for the circumstances of each particular incident. 
 
 Rather than spending significant time and energy defining segments at the beginning of a WiSAR incident, field tasks should be dispatched quickly and efficiently to high-priority areas with minimal management time spent defining specific boundaries for field teams. A field task description should include simple instructions to search a general area, with optional time or resource limits, and focus on search techniques specific to the circumstances of the incident, rather than constraining the team inside an arbitrary boundary. For example:
 
@@ -94,7 +98,7 @@ Depending on the process you use for POA assignment, you may choose to define pr
 
 #### This sounds nice, but downloading GPS tracks from all my teams is too hard.
 
-Not anymore. [New](https://github.com/emenendez/gpxutils/) [tools](https://github.com/emenendez/GPSmapper/) are available which simply the previously time-consuming process of downloading and processing GPS tracks by hand. Also, all modern smartphones have GPS functionality which for the purposes of WiSAR, is just as accurate as any recreational GPS.
+Not anymore. [New](https://github.com/emenendez/gpxutils/) [tools](https://github.com/emenendez/GPSmapper/) are available which simplify the previously time-consuming process of downloading and processing GPS tracks by hand. Also, all modern smartphones have GPS functionality which, for the purposes of WiSAR, is just as accurate as any recreational GPS.
 
 #### How can I visualize all those GPS tracks?
 

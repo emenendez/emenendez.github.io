@@ -94,7 +94,9 @@ Do you? The traditional math of POA, POD, and POS sounds nice, but when is the l
 
 #### What about POA assignment?
 
-Depending on the process you use for POA assignment, you may choose to define probability regions. This is fine --- you just don't need to divide them into segments. Individual field tasks will still fall into one region or another and can be dispatched accordingly. However, keep in mind that searching without segments also frees you to assign POA in any way, to include novel approaches of POA assignment which are data driven instead of consensus based, and may assign POA in a more granular fashion than broadly by region.
+If you choose to use a consensus-based process for POA assignment, you may want to divide the search area into smaller areas --- call them probability regions or segments --- to rank by consensus. Create these regions as quickly and simply as possible, and don't create more than necessary. Once POA is assigned, transfer it to the GIS planning map and dispatch tasks according to which probability region they fall into.
+
+However, keep in mind that searching without segments also frees you to assign POA in any way, to include novel approaches of POA assignment which are data driven instead of consensus based, and may assign POA in a more granular fashion than broadly by region or segment.
 
 #### This sounds nice, but downloading GPS tracks from all my teams is too hard.
 

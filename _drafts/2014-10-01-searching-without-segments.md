@@ -2,7 +2,7 @@
 layout: paper
 title: Searching Without Segments
 
-version: 0.2.0
+version: 0.3.0
 icon:    fa-dot-circle-o
 tagline: Search segments are time-consuming to create and not often searched completely. Get your resources in the field faster, and track search progress better, by ditching the segment for good.
 action:  Find out how
@@ -13,6 +13,8 @@ acknowledgments:
 ---
 
 <p class="intro">{{ page.tagline }}</p>
+
+Using modern GIS tools in the WiSAR ICP allows you to consider new refinements to search planning and management. The search segment was a necessary tool for dividing a search effort into individual tasks and tracking progress when using only paper maps, but with the introduction of a GIS, the need for segments disappears. GIS tools can track search progress on a much finer scale than segments allow, which enables consideration of other techniques for defining and assigning tasks. 
 
 ### The ubiquitous segment
 

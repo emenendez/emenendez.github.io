@@ -2,7 +2,7 @@
 layout: paper
 title: Searching Without Segments
 
-version: 0.4.0
+version: 1.0.0
 icon:    fa-dot-circle-o
 tagline: Search segments are time-consuming to create and not often searched completely. Get your resources in the field faster, and track search progress better, by ditching the segment for good.
 action:  Find out how
@@ -58,7 +58,7 @@ Our friend the segment isn't so great at directing field teams either:
 
 Given the poor performance of the search segment, what then are our other options? Let's first examine how to account for search progress without using segments.
 
-Lacking an accurate method for estimating or calculating POD, this paper proposes tracking search progress by "absolute coverage" --- the exact routes traveled by search teams as measured by GPS. The search planners still assign POA in whatever way is most appropriate, and field tasks are dispatched in order of decreasing POA. However, progress is tracked by GPS --- one GPS per field team is required; more are preferred. A GIS is used to visualize coverage by displaying all completed tracks on the planning map. Areas with higher POA should be searched sooner, and to denser coverage, than areas with low POA. Areas which have not been searched will be quickly apparent, and additional field tasks can be dispatched to fill in the coverage gaps.
+Lacking an accurate method for estimating or calculating POD, this paper proposes tracking search progress by "absolute coverage" --- the exact routes traveled by field teams as measured by GPS. The search planners still assign POA in whatever way is most appropriate, and field tasks are dispatched in order of decreasing POA. However, progress is tracked by GPS --- one GPS per field team is required; more are preferred. A GIS is used to visualize coverage by displaying all completed tracks on the planning map. Areas with higher POA should be searched sooner, and to denser coverage, than areas with low POA. Areas which have not been searched will be quickly apparent, and additional field tasks can be dispatched to fill in the coverage gaps.
 
 ### A better way to direct searchers
 

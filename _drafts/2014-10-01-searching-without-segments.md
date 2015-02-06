@@ -2,7 +2,7 @@
 layout: paper
 title: Searching Without Segments
 
-version: 0.3.0
+version: 0.3.1
 icon:    fa-dot-circle-o
 tagline: Search segments are time-consuming to create and not often searched completely. Get your resources in the field faster, and track search progress better, by ditching the segment for good.
 action:  Find out how
@@ -18,7 +18,7 @@ Using modern GIS tools in the WiSAR ICP allows you to consider new refinements t
 
 ### The ubiquitous segment
 
-It's hard to imagine any but the very smallest of WiSAR incidents without at least a handful of search segments. The segment has a long tradition as the basic unit of search effort --- a search area is divided into segments, which are checked off one by one. Segments also allow search managers to give multiple field teams instructions to each search specific, non-overlapping areas. In short, the segment serves two key roles:
+It's hard to imagine any but the very smallest of WiSAR incidents without at least a handful of search segments. The segment has a long tradition as the basic unit of search effort --- a search area is divided into segments, which are checked off one by one. Segments also allow search managers to give multiple field teams instructions to search specific, non-overlapping areas. In short, the segment serves two key roles:
 
 -   Track search progress
 

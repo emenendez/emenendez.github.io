@@ -14,7 +14,7 @@ Eric Menendez is a member of [Allegheny Mountain Rescue Group](http://www.amrg.i
 # Contact
 
 <i class="fa fa-github"></i> <{{ site.author.url }}>  
-<i class="fa fa-twitter"></i> <{{ site.author.twitter }}>  
+<i class="fa fa-twitter"></i> <{{ site.author.twitter.url }}>  
 <i class="fa fa-globe"></i> <{{ site.url }}>  
 <i class="fa fa-envelope-o"></i> <{{ site.author.email }}>
 

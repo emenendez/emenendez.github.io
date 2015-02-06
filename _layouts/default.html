@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="{{ site.author.twitter.user }}" />
+    <meta name="twitter:title" content="{% if page.title != null %}{{ page.title }}{% else %}{{ site.name | strip_html }}{% endif %}" />
+    <meta name="twitter:description" content="{% if page.tagline != null %}{{ page.tagline }}{% else %}{{ site.description | strip_html }}{% endif %}" />
 
     <title>{% if page.title != null %}{{ page.title }}{% else %}{{ site.name | strip_html }}{% endif %}</title>
 

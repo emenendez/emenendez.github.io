@@ -5,12 +5,14 @@
 
 url:  http://emenendez.github.io
 name: emenendez<span class="github">.github.io</span>
-description: Thoughts on wildland search & rescue.
+description: 'Thoughts on wildland search & rescue.'
 author:
   name: Eric Menendez
   email: ericmenendez@gmail.com
   url: https://github.com/emenendez
-  twitter: https://twitter.com/ericrmenendez
+  twitter:
+    url: https://twitter.com/ericrmenendez
+    user: '@ericrmenendez'
 
 license:
   name: CC-BY-SA 4.0

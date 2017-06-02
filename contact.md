@@ -9,7 +9,7 @@ title:      About / Contact
 
 # About Eric
 
-Eric Menendez is a member of [Allegheny Mountain Rescue Group](http://www.amrg.info) and [Shenandoah Mountain Rescue Group](http://www.smrg.org), member teams of the [Appalachian Search & Rescue Conference](http://www.asrc.net). He is interested in helping wildland search and resuce teams improve outcomes through critical thought, informed planning, and advanced technology.
+Eric Menendez is a member of [Allegheny Mountain Rescue Group](http://www.amrg.info) and [Shenandoah Mountain Rescue Group](http://www.smrg.org), member teams of the [Appalachian Search & Rescue Conference](http://www.asrc.net). He is interested in helping wildland search and rescue teams improve outcomes through critical thought, informed planning, and advanced technology.
 
 # Contact
 
